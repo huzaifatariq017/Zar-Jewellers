@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAR JEWELLERS - Vehari | Bridal & Gold Plated Jewelry</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#fdf8f0}
+.top{background:#1a1a1a;color:#d4af37;text-align:center;padding:8px;font-size:13px}
+.navbar{background:white;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;position:sticky;top:0;box-shadow:0 2px 10px #ddd;z-index:20;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:900} .logo span{color:#d4af37}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.nav-links a{text-decoration:none;color:#333;font-weight:bold;font-size:14px;padding:6px 10px;border-radius:20px}
+.nav-links a:hover{background:#1a1a1a;color:#d4af37}
+.cart-btn{background:#1a1a1a;color:#d4af37;padding:10px 18px;border-radius:20px;border:none;font-weight:bold;cursor:pointer}
+.search{width:100%;margin-top:10px} .search input{width:100%;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none}
+.hero{background:linear-gradient(90deg,#1a1a1a,#8b6f2e);color:white;padding:40px 20px;text-align:center}
+.hero h1{font-size:32px} .hero p{margin:10px 0;color:#f5e6b8} .hero a{background:#d4af37;color:black;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:10px}
+.cat{display:flex;gap:10px;overflow:auto;padding:15px}
+.cat button{white-space:nowrap;padding:9px 18px;border-radius:20px;border:1px solid #ddd;background:white;cursor:pointer;font-weight:bold}
+.cat button.active{background:#1a1a1a;color:#d4af37}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 15px 20px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px #ddd}
+.card img{width:100%;height:180px;object-fit:cover}
+.card .info{padding:12px}
+.card h3{font-size:15px} .card p{font-size:12px;color:gray;margin:4px 0}
+.price{font-weight:900;font-size:17px} .old{color:red;text-decoration:line-through;font-size:13px;margin-left:5px}
+.add{width:100%;background:#d4af37;color:black;border:none;padding:10px;border-radius:8px;margin-top:8px;font-weight:bold;cursor:pointer}
+.badge{background:#d4af37;color:black;font-size:11px;padding:3px 8px;border-radius:10px;font-weight:bold}
+#cartBox{position:fixed;right:0;top:0;width:90%;max-width:380px;height:100%;background:white;box-shadow:-5px 0 20px #aaa;transform:translateX(100%);transition:0.3s;padding:20px;overflow:auto;z-index:99}
+#cartBox.open{transform:translateX(0)}
+.cart-item{display:flex;gap:10px;margin:12px 0;border-bottom:1px solid #eee;padding-bottom:10px}
+.cart-item img{width:60px;height:60px;object-fit:cover;border-radius:8px}
+input,select{width:100%;padding:11px;margin:7px 0;border:1px solid #ddd;border-radius:8px}
+.checkout{background:#22c55e;color:white;border:none;padding:14px;width:100%;border-radius:10px;font-weight:bold;font-size:16px;margin-top:10px}
+.close{float:right;background:red;color:white;border:none;padding:5px 10px;border-radius:5px}
+.features{display:flex;justify-content:space-around;background:white;padding:15px;margin:0 15px 15px;border-radius:12px;text-align:center;font-size:12px}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:100}
+.whatsapp-text{position:fixed;bottom:32px;right:88px;background:white;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:bold;box-shadow:0 2px 10px #ccc;z-index:100}
+footer{background:#111;color:#ddd;padding:30px 20px 15px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:1000px;margin:auto}
+@media(min-width:700px){.footer-grid{grid-template-columns:1.5fr 1fr 1.5fr}}
+footer h3{color:#d4af37;margin-bottom:10px;font-size:18px}
+footer h4{color:white;margin-bottom:10px}
+footer p,footer a{font-size:14px;line-height:24px;color:#ccc;text-decoration:none}
+footer a{display:block}
+footer a:hover{color:#d4af37}
+.footer-btn{display:inline-block;background:#25D366;color:white!important;padding:10px 18px;border-radius:20px;font-weight:bold;margin-top:10px}
+.footer-bottom{border-top:1px solid #333;margin-top:20px;padding-top:12px;text-align:center;font-size:13px;color:#999}
+</style>
+</head>
+<body>
+<div class="top">✨ ZAR JEWELLERS - VEHARI | FREE DELIVERY ON ORDER ABOVE RS 5000 ✨</div>
+<nav class="navbar">
+<div class="logo">ZAR <span>JEWELLERS ✨</span></div>
+<div class="nav-links">
+<a href="#" onclick="filterCat('all',this)">Home</a>
+<a href="#products" onclick="filterCat('ring',this)">💍 Rings</a>
+<a href="#products" onclick="filterCat('necklace',this)">📿 Necklace</a>
+<a href="#products" onclick="filterCat('earrings',this)">✨ Earrings</a>
+<a href="#products" onclick="filterCat('bridal',this)">👑 Bridal</a>
+<a href="#products" onclick="filterCat('bracelet',this)">⌚ Bracelet</a>
+<a href="#footer">📞 Contact</a>
+</div>
+<button class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+<div class="search"><input id="searchInput" onkeyup="searchProduct()" placeholder="Search Ring, Necklace, Earrings..."></div>
+</nav>
+<div class="hero">
+<h1>Zar Jewellers ✨ - Vehari</h1>
+<p>Gold Plated | Artificial Jewelry | Bridal Set | Vehari - All Pakistan Delivery</p>
+<a href="#products">Shop Now →</a>
+</div>
+<div class="cat">
+<button class="active" onclick="filterCat('all',this)">All (30)</button>
+<button onclick="filterCat('ring',this)">💍 Rings</button>
+<button onclick="filterCat('necklace',this)">📿 Necklace</button>
+<button onclick="filterCat('earrings',this)">✨ Earrings</button>
+<button onclick="filterCat('bridal',this)">👑 Bridal Set</button>
+<button onclick="filterCat('bracelet',this)">⌚ Bracelet</button>
+</div>
+<div class="features">
+<div>✅<br>Cash On Delivery</div><div>🚚<br>Vehari Delivery</div><div>↩️<br>7 Days Return</div><div>💯<br>Premium Quality</div>
+</div>
+<div class="grid" id="products"></div>
+<div id="cartBox">
+<button class="close" onclick="closeCart()">X</button>
+<h2>Your Cart 🛒</h2>
+<div id="cartItems"><p>Cart is empty</p></div>
+<hr>
+<h3>Total: Rs <span id="cartTotal">0</span></h3>
+<p style="font-size:13px;color:gray">Delivery: Rs 250 (Free if order > 5000)</p>
+<h3 style="margin-top:15px">Checkout Details</h3>
+<input id="cname" placeholder="Your Full Name">
+<input id="cphone" placeholder="Phone Number - 03xx-xxxxxxx">
+<input id="caddress" placeholder="Full Address - Vehari, Punjab">
+<select id="cpayment"><option>Cash On Delivery</option><option>JazzCash</option><option>Easypaisa</option><option>Bank Transfer</option></select>
+<button class="checkout" onclick="checkout()">Place Order on WhatsApp ✅</button>
+</div>
+<div class="whatsapp-text">Order Karo 👉</div>
+<a class="whatsapp-float" href="https://wa.me/923341765911?text=Assalam%20o%20Alaikum%20Zar%20Jewellers!%20Mujhe%20Jewelry%20Order%20Karni%20Hai" target="_blank">💬</a>
+
+<footer id="footer">
+<div class="footer-grid">
+<div>
+<h3>ZAR JEWELLERS ✨</h3>
+<p>Vehari ki sab se trusted jewelry shop. Gold Plated, Artificial aur Bridal Jewelry - Premium Quality, Munasib Price.</p>
+<p style="margin-top:8px">⭐⭐⭐⭐⭐ 4.9 Rating | 500+ Happy Customers</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="#" onclick="filterCat('all',this)">🏠 Home</a>
+<a href="#products" onclick="filterCat('ring',this)">💍 Rings Collection</a>
+<a href="#products" onclick="filterCat('necklace',this)">📿 Necklace Collection</a>
+<a href="#products" onclick="filterCat('bridal',this)">👑 Bridal Sets</a>
+<a href="#products" onclick="filterCat('earrings',this)">✨ Earrings</a>
+</div>
+<div>
+<h4>Contact Us</h4>
+<p>📍 Main Bazaar, Vehari, Punjab, Pakistan</p>
+<p>📞 0334-1765911</p>
+<p>💬 WhatsApp: 0334-1765911</p>
+<p>🕐 Subah 10 AM - Raat 10 PM (7 Days Open)</p>
+<p>🚚 Vehari Me Same Day Delivery</p>
+<a class="footer-btn" href="https://wa.me/923341765911" target="_blank">WhatsApp Par Order Karo →</a>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 Zar Jewellers - Vehari, Punjab, Pakistan | All Rights Reserved
+</div>
+</footer>
+
+<script>
+let products=[
+{id:1,name:"Gold Plated Ring",cat:"ring",price:1499,old:2499,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400",desc:"Gold Plated | Adjustable"},
+{id:2,name:"Diamond Ring",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",desc:"Zircon Stone | Premium"},
+{id:3,name:"Couple Rings",cat:"ring",price:2499,old:3999,img:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400",desc:"Pair | Silver + Gold"},
+{id:4,name:"Pearl Necklace",cat:"necklace",price:2999,old:4999,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"Pearl | Elegant"},
+{id:5,name:"Gold Chain Necklace",cat:"necklace",price:3499,old:5500,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400",desc:"Gold Plated | Long"},
+{id:6,name:"Choker Necklace",cat:"necklace",price:2199,old:3299,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Bridal | Kundan"},
+{id:7,name:"Gold Jhumka Earrings",cat:"earrings",price:1299,old:1999,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Jhumka | Traditional"},
+{id:8,name:"Pearl Earrings",cat:"earrings",price:999,old:1599,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Pearl Drop | Light Weight"},
+{id:9,name:"Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Full Set | Necklace + Earrings + Tikka"},
+{id:10,name:"Bridal Kundan Set",cat:"bridal",price:9999,old:15000,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Kundan | Premium Bridal"},
+{id:11,name:"Gold Bracelet",cat:"bracelet",price:1799,old:2699,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Bracelet | Gold Plated"},
+{id:12,name:"Tikka + Earrings Set",cat:"bridal",price:2499,old:3799,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Matha Patti | Set"},
+{id:13,name:"Silver Ring For Men",cat:"ring",price:1799,old:2599,img:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=400",desc:"Men | Silver | Stylish"},
+{id:14,name:"Ruby Stone Ring",cat:"ring",price:2299,old:3499,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Ruby | Gold Plated"},
+{id:15,name:"Long Mala Necklace",cat:"necklace",price:2799,old:4199,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400",desc:"Mala | Bridal | Long"},
+{id:16,name:"Gold Tops Earrings",cat:"earrings",price:799,old:1299,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Daily Wear | Small Tops"},
+{id:17,name:"Chand Bali Earrings",cat:"earrings",price:1599,old:2399,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=400",desc:"Chand Bali | Fancy"},
+{id:18,name:"Mehndi Bridal Set",cat:"bridal",price:5999,old:8999,img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400",desc:"Mehndi | Green + Gold"},
+{id:19,name:"Gold Kara Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Kara | Men & Women"},
+{id:20,name:"Pearl Choker Set",cat:"necklace",price:3299,old:4999,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Pearl + Choker | Premium"},
+{id:21,name:"Engagement Ring",cat:"ring",price:2999,old:4500,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",desc:"Engagement | Solitaire"},
+{id:22,name:"Emerald Ring",cat:"ring",price:2599,old:3899,img:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400",desc:"Green Stone | Fancy"},
+{id:23,name:"Heart Pendant Necklace",cat:"necklace",price:1899,old:2899,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"Heart | Gift For Her"},
+{id:24,name:"Kundan Necklace",cat:"necklace",price:4499,old:6499,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Kundan | Party Wear"},
+{id:25,name:"Jhumka + Tikka Set",cat:"earrings",price:1999,old:2999,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Jhumka + Tikka Combo"},
+{id:26,name:"Diamond Stud Earrings",cat:"earrings",price:1499,old:2299,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Stud | Daily Wear"},
+{id:27,name:"Red Bridal Set",cat:"bridal",price:8999,old:13500,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Red | Dulhan Special"},
+{id:28,name:"Royal Bridal Set",cat:"bridal",price:11999,old:18000,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Royal | Full Heavy Set"},
+{id:29,name:"Silver Bracelet",cat:"bracelet",price:1499,old:2199,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Silver | Chain Bracelet"},
+{id:30,name:"Bangles Set - 4 Pcs",cat:"bracelet",price:1199,old:1899,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Bangles | Colorful"},
+];
+let cart=[];
+function render(list){
+let html='';
+list.forEach(p=>{
+html+=`<div class="card"><img src="${p.img}"><div class="info"><span class="badge">-30% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price}</span><span class="old">Rs ${p.old}</span></div><div style="color:#f59e0b">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`;
+});
+document.getElementById('products').innerHTML=html;
+}
+render(products);
+function filterCat(c,btn){
+document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active')); 
+if(btn && btn.classList) btn.classList.add('active');
+if(c=='all') render(products); else render(products.filter(p=>p.cat==c));
+}
+function searchProduct(){
+let q=document.getElementById('searchInput').value.toLowerCase();
+render(products.filter(p=>p.name.toLowerCase().includes(q)));
+}
+function addToCart(id){
+let p=products.find(x=>x.id==id); cart.push(p); updateCart(); alert(p.name+' Added To Cart!');
+}
+function updateCart(){
+document.getElementById('cartCount').innerText=cart.length;
+let total=cart.reduce((s,p)=>s+p.price,0);
+document.getElementById('cartTotal').innerText=total;
+if(cart.length==0) document.getElementById('cartItems').innerHTML='<p>Cart is empty</p>';
+else{
+let h=''; cart.forEach((p,i)=>{ h+=`<div class="cart-item"><img src="${p.img}"><div><b>${p.name}</b><br>Rs ${p.price}<br><button onclick="removeItem(${i})" style="color:red;border:none;background:none">Remove</button></div></div>`});
+document.getElementById('cartItems').innerHTML=h;
+}
+}
+function removeItem(i){ cart.splice(i,1); updateCart(); }
+function openCart(){ document.getElementById('cartBox').classList.add('open'); }
+function closeCart(){ document.getElementById('cartBox').classList.remove('open'); }
+function checkout(){
+let name=document.getElementById('cname').value;
+let phone=document.getElementById('cphone').value;
+let addr=document.getElementById('caddress').value;
+let pay=document.getElementById('cpayment').value;
+if(!name||!phone||!addr){ alert('Please apna Name, Phone aur Address likhein'); return; }
+if(cart.length==0){ alert('Cart khali hai!'); return; }
+let total=document.getElementById('cartTotal').innerText;
+let items=cart.map(p=>p.name+' - Rs '+p.price).join('%0A');
+let msg=`NEW ORDER - ZAR JEWELLERS VEHARI%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0APayment: ${pay}%0A%0AItems:%0A${items}%0A%0ATotal: Rs ${total}`;
+window.open(`https://wa.me/923341765911?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
