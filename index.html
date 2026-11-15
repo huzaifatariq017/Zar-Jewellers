@@ -242,11 +242,10 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </div>
 </footer>
 <script>
-// Fallback - agar koi pic na khule to khud hi sahi jewelry pic laga dega, kabhi blank nahi rahega
 const FALLBACK="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&auto=format&fit=crop&q=80";
 function fixImg(el){ el.onerror=null; el.src=FALLBACK; }
 let products=[
-// 1-3 RING - Sahi hain, same rakhe
+// 1-3 RING - Sahi hain
 {id:1,name:"Gold Diamond Ring Women",cat:"ring",price:2599,old:3999,img:"https://cdn.caratlane.com/media/catalog/product/J/R/JR03799-YGS300_10_lar.jpg",desc:"Gold | Diamond | Women"},
 {id:2,name:"Mens Gold Signet Ring",cat:"ring",price:2199,old:3299,img:"https://bafleh.com/wp-content/uploads/2026/07/B26MR6-2-1-1500x1500.jpg",desc:"Men | Gold | Signet"},
 {id:3,name:"Diamond Zircon Solitaire Ring",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",desc:"Zircon Stone | Premium"},
@@ -257,29 +256,29 @@ let products=[
 {id:7,name:"Women Gold Thin Chain Necklace",cat:"necklace",price:1999,old:2999,img:"https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/0hUAAOSwW-BlTetQ/$_57.JPG?set_id=8800005007",desc:"Gold | Thin Chain | Women"},
 // 8 EARRINGS - Sahi hai
 {id:8,name:"Gold Jhumka Pair",cat:"earrings",price:1399,old:2099,img:"https://i.pinimg.com/originals/d0/fc/46/d0fc468e3e3afa8561f24a8322d822ea.jpg",desc:"Gold | Jhumka Pair"},
-// 9 FIXED - Pehle blank thi, ab Earrings wali Unsplash pic
-{id:9,name:"Diamond Stud Earrings Pair",cat:"earrings",price:2199,old:3299,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&auto=format&fit=crop&q=80",desc:"Diamond | Stud Pair"},
-// 10 FIXED - Pehle blank thi, ab Chandbali / Jhumka wali Unsplash pic
-{id:10,name:"Gold Chandbali Earrings",cat:"earrings",price:1799,old:2699,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=600&auto=format&fit=crop&q=80",desc:"Gold | Chandbali"},
+// 9 FIXED - Ab 2 Diamond Stud Earrings safed background pe
+{id:9,name:"Diamond Stud Earrings Pair",cat:"earrings",price:2199,old:3299,img:"https://gemstoneking.com/cdn/shop/files/0.40-lab-a-w.jpg?v=1780680929&width=750",desc:"Diamond | Stud Pair"},
+// 10 FIXED - Ab asli Chandbali Earrings
+{id:10,name:"Gold Chandbali Earrings",cat:"earrings",price:1799,old:2699,img:"https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwb7266e6a/images/hi-res/511920DEVABA00_1.jpg",desc:"Gold | Chandbali"},
 // 11-13 BRIDAL - Sahi hain
 {id:11,name:"Bridal Gold Necklace Set",cat:"bridal",price:8999,old:13999,img:"https://i.etsystatic.com/66074302/r/il/7708ad/8185580895/il_600x600.8185580895_l106.jpg",desc:"Gold | Bridal Set | Choker + Mala"},
 {id:12,name:"Red Bridal Full Set",cat:"bridal",price:10999,old:16500,img:"https://www.nayabjewellery.com/cdn/shop/files/WhatsAppImage2025-10-06at7.57.05PM_1.jpg?v=1759766099&width=1445",desc:"Red | Full Bridal Set | Tikka + Earrings"},
 {id:13,name:"Complete Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:"https://ashokjewelers.com/cdn/shop/files/bridal_set_1.jpg?v=1766016624&width=720",desc:"Full Set | Necklace + Earrings + Tikka"},
-// 14 FIXED - Pehle blank thi, ab Bracelet wali Unsplash pic
-{id:14,name:"Silver Chain Bracelet Men",cat:"bracelet",price:1699,old:2499,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&auto=format&fit=crop&q=80",desc:"Silver | Chain | Men"},
-// 15 FIXED - Pehle Necklace+Earrings aa raha tha, ab Kara / Bangle wali pic
-{id:15,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&auto=format&fit=crop&q=80",desc:"Kara | Men & Women"},
+// 14 FIXED - Ab haath pe Silver Chain Bracelet
+{id:14,name:"Silver Chain Bracelet Men",cat:"bracelet",price:1699,old:2499,img:"https://i.pinimg.com/originals/9f/ff/1d/9fff1d6eedc9f9e9ab034b36d1354de4.jpg",desc:"Silver | Chain | Men"},
+// 15 FIXED - Ab haath pe Gold Kara
+{id:15,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://nayaabcollective.com/cdn/shop/files/20.jpg?v=1779513736&width=1024",desc:"Kara | Men & Women"},
 // 16-17 BANGLES - Sahi hain
 {id:16,name:"Gold Bangles Set Women",cat:"bangles",price:1999,old:2999,img:"https://andaazjewels.com/cdn/shop/products/IMG_8424_85f0de0e-8c29-4f09-a8a2-df6c16466b73_1800x.jpg",desc:"Gold | Bangles Set | Women"},
 {id:17,name:"Multi Color Glass Bangles 24 Pcs",cat:"bangles",price:1299,old:1999,img:"https://rukminim3.flixcart.com/image/1114/972/xif0q/bangle-bracelet-armlet/x/e/9/2-2-0-2-na-24-ramaa-raindropbangle-pack-of-24-bangle-darkmulti-2-original-imahnx7czt3hhrbg.jpeg?q=60&crop=false",desc:"Glass | Multi Color | 24 Pcs"},
 // 18 TIKKA - Sahi hai
 {id:18,name:"Gold Maang Tikka",cat:"tikka",price:1499,old:2299,img:"https://pub-d3a58fb30430417fbf76ea0914807be1.r2.dev/prompts/jewelry-photoshoot/maang-tikka/original/1029opulent-wedding-jewelry-focus.jpg",desc:"Gold | Maang Tikka"},
-// 19 FIXED - Pehle Blue Dil wale Earrings aa rahe the, ab Bridal Tikka wali pic
-{id:19,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&auto=format&fit=crop&q=80",desc:"Kundan | Bridal"},
-// 20 FIXED - Pehle blank thi, ab Chota Diamond Stud wali pic
-{id:20,name:"Diamond Nose Pin Small",cat:"nosepin",price:899,old:1399,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",desc:"Diamond | Small Nose Pin"},
-// 21 FIXED - Pehle Moti Haar aa raha tha, ab Chota Gold Stud wali pic
-{id:21,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&auto=format&fit=crop&q=80",desc:"Gold Plated | Small Diamond"},
+// 19 FIXED - Ab shaadi wali pic nahi, maathay pe Kundan Tikka
+{id:19,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:"https://preetimohan.com/cdn/shop/files/71.png?v=1756141649&width=540",desc:"Kundan | Bridal"},
+// 20 FIXED - Ab bara Ring nahi, chota Diamond Nose Pin
+{id:20,name:"Diamond Nose Pin Small",cat:"nosepin",price:899,old:1399,img:"https://boorugujewels.com/wp-content/uploads/2023/08/Diamond-Nose-Pin-3.jpg",desc:"Diamond | Small Nose Pin"},
+// 21 FIXED - Ab Haar nahi, ungli pe pakra hua chota Gold Nose Pin
+{id:21,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:"https://i.etsystatic.com/16527173/r/il/56097c/8156644362/il_1080xN.8156644362_4ile.jpg",desc:"Gold Plated | Small Diamond"},
 // 22-24 ANKLET + WATCH - Sahi hain
 {id:22,name:"Gold Payal Anklet Pair",cat:"anklet",price:1899,old:2899,img:"https://assets.myntassets.com/h_560,q_90,w_420/v1/assets/images/2026/AUGUST/31/844910f3d8f747dcb010556c2bedec34.jpg",desc:"Gold | Payal | Anklet Pair"},
 {id:23,name:"Luxury Gold Watch Men",cat:"watch",price:5999,old:8999,img:"https://m.media-amazon.com/images/I/81GMWja9ZaL._AC_UY900_.jpg",desc:"Gold | Luxury | Men"},
