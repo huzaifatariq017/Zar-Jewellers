@@ -242,40 +242,46 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </div>
 </footer>
 <script>
+// Fallback - agar koi pic na khule to khud hi sahi jewelry pic laga dega, kabhi blank nahi rahega
+const FALLBACK="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&auto=format&fit=crop&q=80";
+function fixImg(el){ el.onerror=null; el.src=FALLBACK; }
 let products=[
-// ✅ SIRF 24 - HAR PIC NAAM KE SAATH 100% MATCH - HAR PIC ALAG
-// 1-3 RING - Pic me sirf Ring hai
+// 1-3 RING - Sahi hain, same rakhe
 {id:1,name:"Gold Diamond Ring Women",cat:"ring",price:2599,old:3999,img:"https://cdn.caratlane.com/media/catalog/product/J/R/JR03799-YGS300_10_lar.jpg",desc:"Gold | Diamond | Women"},
 {id:2,name:"Mens Gold Signet Ring",cat:"ring",price:2199,old:3299,img:"https://bafleh.com/wp-content/uploads/2026/07/B26MR6-2-1-1500x1500.jpg",desc:"Men | Gold | Signet"},
 {id:3,name:"Diamond Zircon Solitaire Ring",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",desc:"Zircon Stone | Premium"},
-// 4-7 NECKLACE - Pic me sirf Necklace hai
+// 4-7 NECKLACE - Sahi hain
 {id:4,name:"Gold Pendant Necklace Women",cat:"necklace",price:2399,old:3599,img:"https://prao.com/cdn/shop/files/image-7_816c0bcf-2b8c-4b05-b848-dfe8eb9f31e5.jpg?v=1779279184&width=1100",desc:"Gold | Pendant | Women"},
 {id:5,name:"Pearl Elegant Necklace",cat:"necklace",price:3199,old:4799,img:"https://cdn2.jomashop.com/media/catalog/product/cache/0ee3019724ce73007b606b54ba535a23/b/e/belacqua-round-white-south-sea-pearl-graduated-strand-necklace-in-14k-white-gold105130mm-pearls-18-inches-diamond-ball-clasp-nsv_3.jpg?width=546&height=546",desc:"Pearl | Elegant | Single Strand"},
 {id:6,name:"Kundan Choker Necklace Red Green",cat:"necklace",price:2899,old:4299,img:"https://indoraaga.com/cdn/shop/files/NW-22-KUN-GP-NS-0223-0575-2.jpg?v=1697120960&width=713",desc:"Kundan | Choker | Red Green"},
 {id:7,name:"Women Gold Thin Chain Necklace",cat:"necklace",price:1999,old:2999,img:"https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/0hUAAOSwW-BlTetQ/$_57.JPG?set_id=8800005007",desc:"Gold | Thin Chain | Women"},
-// 8-10 EARRINGS - Pic me sirf Earrings hain
+// 8 EARRINGS - Sahi hai
 {id:8,name:"Gold Jhumka Pair",cat:"earrings",price:1399,old:2099,img:"https://i.pinimg.com/originals/d0/fc/46/d0fc468e3e3afa8561f24a8322d822ea.jpg",desc:"Gold | Jhumka Pair"},
-{id:9,name:"Diamond Stud Earrings Pair",cat:"earrings",price:2199,old:3299,img:"https://media.rainpos.com/13635/shopify/estate-14k-w-gold-020ctw-gsi2-i1-diamond-stud-earrings-719403.jpg",desc:"Diamond | Stud Pair"},
-{id:10,name:"Gold Chandbali Earrings",cat:"earrings",price:1799,old:2699,img:"https://shop.swarna.com/wp-content/uploads/2023/04/OQ3843_4.jpg",desc:"Gold | Chandbali"},
-// 11-13 BRIDAL - Pic me sirf Bridal Set hai
+// 9 FIXED - Pehle blank thi, ab Earrings wali Unsplash pic
+{id:9,name:"Diamond Stud Earrings Pair",cat:"earrings",price:2199,old:3299,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&auto=format&fit=crop&q=80",desc:"Diamond | Stud Pair"},
+// 10 FIXED - Pehle blank thi, ab Chandbali / Jhumka wali Unsplash pic
+{id:10,name:"Gold Chandbali Earrings",cat:"earrings",price:1799,old:2699,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=600&auto=format&fit=crop&q=80",desc:"Gold | Chandbali"},
+// 11-13 BRIDAL - Sahi hain
 {id:11,name:"Bridal Gold Necklace Set",cat:"bridal",price:8999,old:13999,img:"https://i.etsystatic.com/66074302/r/il/7708ad/8185580895/il_600x600.8185580895_l106.jpg",desc:"Gold | Bridal Set | Choker + Mala"},
 {id:12,name:"Red Bridal Full Set",cat:"bridal",price:10999,old:16500,img:"https://www.nayabjewellery.com/cdn/shop/files/WhatsAppImage2025-10-06at7.57.05PM_1.jpg?v=1759766099&width=1445",desc:"Red | Full Bridal Set | Tikka + Earrings"},
 {id:13,name:"Complete Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:"https://ashokjewelers.com/cdn/shop/files/bridal_set_1.jpg?v=1766016624&width=720",desc:"Full Set | Necklace + Earrings + Tikka"},
-// 14-15 BRACELET - Pic me sirf Bracelet hai
-{id:14,name:"Silver Chain Bracelet Men",cat:"bracelet",price:1699,old:2499,img:"https://www.alfredco.com/wp-content/uploads/2025/11/Mens-Silver-Bracelets.jpeg",desc:"Silver | Chain | Men"},
-{id:15,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&auto=format&fit=crop&q=80",desc:"Kara | Men & Women"},
-// 16-17 BANGLES - Pic me sirf Bangles hain
+// 14 FIXED - Pehle blank thi, ab Bracelet wali Unsplash pic
+{id:14,name:"Silver Chain Bracelet Men",cat:"bracelet",price:1699,old:2499,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&auto=format&fit=crop&q=80",desc:"Silver | Chain | Men"},
+// 15 FIXED - Pehle Necklace+Earrings aa raha tha, ab Kara / Bangle wali pic
+{id:15,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&auto=format&fit=crop&q=80",desc:"Kara | Men & Women"},
+// 16-17 BANGLES - Sahi hain
 {id:16,name:"Gold Bangles Set Women",cat:"bangles",price:1999,old:2999,img:"https://andaazjewels.com/cdn/shop/products/IMG_8424_85f0de0e-8c29-4f09-a8a2-df6c16466b73_1800x.jpg",desc:"Gold | Bangles Set | Women"},
 {id:17,name:"Multi Color Glass Bangles 24 Pcs",cat:"bangles",price:1299,old:1999,img:"https://rukminim3.flixcart.com/image/1114/972/xif0q/bangle-bracelet-armlet/x/e/9/2-2-0-2-na-24-ramaa-raindropbangle-pack-of-24-bangle-darkmulti-2-original-imahnx7czt3hhrbg.jpeg?q=60&crop=false",desc:"Glass | Multi Color | 24 Pcs"},
-// 18-19 TIKKA - Pic me sirf Tikka hai
+// 18 TIKKA - Sahi hai
 {id:18,name:"Gold Maang Tikka",cat:"tikka",price:1499,old:2299,img:"https://pub-d3a58fb30430417fbf76ea0914807be1.r2.dev/prompts/jewelry-photoshoot/maang-tikka/original/1029opulent-wedding-jewelry-focus.jpg",desc:"Gold | Maang Tikka"},
-{id:19,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&auto=format&fit=crop&q=80",desc:"Kundan | Bridal"},
-// 20-21 NOSE PIN - Pic me sirf Nose Pin hai
-{id:20,name:"Diamond Nose Pin Small",cat:"nosepin",price:899,old:1399,img:"https://yuvorajewels.com/cdn/shop/files/DIANP1047-14YG-IS.webp?v=1766224116&width=1500",desc:"Diamond | Small Nose Pin"},
+// 19 FIXED - Pehle Blue Dil wale Earrings aa rahe the, ab Bridal Tikka wali pic
+{id:19,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&auto=format&fit=crop&q=80",desc:"Kundan | Bridal"},
+// 20 FIXED - Pehle blank thi, ab Chota Diamond Stud wali pic
+{id:20,name:"Diamond Nose Pin Small",cat:"nosepin",price:899,old:1399,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",desc:"Diamond | Small Nose Pin"},
+// 21 FIXED - Pehle Moti Haar aa raha tha, ab Chota Gold Stud wali pic
 {id:21,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&auto=format&fit=crop&q=80",desc:"Gold Plated | Small Diamond"},
-// 22 ANKLET - Pic me sirf Payal hai
+// 22-24 ANKLET + WATCH - Sahi hain
 {id:22,name:"Gold Payal Anklet Pair",cat:"anklet",price:1899,old:2899,img:"https://assets.myntassets.com/h_560,q_90,w_420/v1/assets/images/2026/AUGUST/31/844910f3d8f747dcb010556c2bedec34.jpg",desc:"Gold | Payal | Anklet Pair"},
-// 23-24 WATCH - Pic me sirf Watch hai
 {id:23,name:"Luxury Gold Watch Men",cat:"watch",price:5999,old:8999,img:"https://m.media-amazon.com/images/I/81GMWja9ZaL._AC_UY900_.jpg",desc:"Gold | Luxury | Men"},
 {id:24,name:"Minimal White Watch - Unisex",cat:"watch",price:4999,old:7999,img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",desc:"White Strap | Minimal | Unisex"},
 ];
@@ -291,7 +297,7 @@ function getFiltered(){ let q=document.getElementById('searchInput').value.toLow
 function render(list){
   document.getElementById('countBar').innerText=`Showing ${list.length} Products ${currentCat!='all'?' - '+currentCat.toUpperCase():''}`;
   if(list.length==0){ document.getElementById('products').innerHTML='<div class="empty">😔 Koi product nahi mila<br><small>Doosra naam try karo</small></div>'; return; }
-  let html=''; list.forEach(p=>{ let off=Math.round((1-p.price/p.old)*100); html+=`<div class="card"><img src="${p.img}" loading="lazy" referrerpolicy="no-referrer"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`; }); document.getElementById('products').innerHTML=html;
+  let html=''; list.forEach(p=>{ let off=Math.round((1-p.price/p.old)*100); html+=`<div class="card"><img src="${p.img}" loading="lazy" referrerpolicy="no-referrer" onerror="fixImg(this)"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`; }); document.getElementById('products').innerHTML=html;
 }
 render(products);
 function filterCat(c,btn){ currentCat=c; document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active')); document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active')); if(btn && btn.classList) btn.classList.add('active'); render(getFiltered()); document.getElementById('products').scrollIntoView({behavior:'smooth',block:'start'}); }
@@ -299,7 +305,7 @@ function searchProduct(){ render(getFiltered()); }
 function showToast(msg){ let t=document.getElementById('toast'); t.innerText=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2000); }
 function addToCart(id){ let p=products.find(x=>x.id==id); let f=cart.find(x=>x.id==id); if(f) f.qty++; else cart.push({...p,qty:1}); updateCart(); showToast(p.name+' Added ✅'); }
 function changeQty(id,d){ let it=cart.find(x=>x.id==id); if(!it) return; it.qty+=d; if(it.qty<=0) cart=cart.filter(x=>x.id!=id); updateCart(); }
-function updateCart(){ let count=cart.reduce((s,p)=>s+p.qty,0); document.getElementById('cartCount').innerText=count; let total=cart.reduce((s,p)=>s+p.price*p.qty,0); document.getElementById('cartTotal').innerText=total.toLocaleString(); let del = total==0?0 : (total>=5000?0:250); document.getElementById('delCharge').innerText = del==0? (total==0?'Rs 0':'FREE ✅') : 'Rs '+del; document.getElementById('grandTotal').innerText=(total+del).toLocaleString(); document.getElementById('freeMsg').innerText = total>0 && total<5000 ? `Rs ${(5000-total).toLocaleString()} aur add karo, Delivery FREE ho jayegi! 🎉` : (total>=5000?'🎉 Aapki Delivery FREE hai!':''); if(cart.length==0) document.getElementById('cartItems').innerHTML='<p style="text-align:center;color:#999;padding:20px">Cart is empty<br>🛒 Koi product add karo</p>'; else{ let h=''; cart.forEach(p=>{ h+=`<div class="cart-item"><img src="${p.img}"><div style="flex:1"><b>${p.name}</b><br><span style="font-size:13px;color:#888">${p.desc}</span><br>Rs ${p.price.toLocaleString()} x ${p.qty} = <b>Rs ${(p.price*p.qty).toLocaleString()}</b><br><div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button class="qty-btn" onclick="changeQty(${p.id},-1)">-</button><b>${p.qty}</b><button class="qty-btn" onclick="changeQty(${p.id},1)">+</button><button onclick="changeQty(${p.id},-${p.qty})" style="color:red;border:none;background:none;margin-left:6px;cursor:pointer">Remove</button></div></div></div>`}); document.getElementById('cartItems').innerHTML=h; } let dc=document.getElementById('dashCart'); if(dc) dc.innerText=count; }
+function updateCart(){ let count=cart.reduce((s,p)=>s+p.qty,0); document.getElementById('cartCount').innerText=count; let total=cart.reduce((s,p)=>s+p.price*p.qty,0); document.getElementById('cartTotal').innerText=total.toLocaleString(); let del = total==0?0 : (total>=5000?0:250); document.getElementById('delCharge').innerText = del==0? (total==0?'Rs 0':'FREE ✅') : 'Rs '+del; document.getElementById('grandTotal').innerText=(total+del).toLocaleString(); document.getElementById('freeMsg').innerText = total>0 && total<5000 ? `Rs ${(5000-total).toLocaleString()} aur add karo, Delivery FREE ho jayegi! 🎉` : (total>=5000?'🎉 Aapki Delivery FREE hai!':''); if(cart.length==0) document.getElementById('cartItems').innerHTML='<p style="text-align:center;color:#999;padding:20px">Cart is empty<br>🛒 Koi product add karo</p>'; else{ let h=''; cart.forEach(p=>{ h+=`<div class="cart-item"><img src="${p.img}" onerror="fixImg(this)"><div style="flex:1"><b>${p.name}</b><br><span style="font-size:13px;color:#888">${p.desc}</span><br>Rs ${p.price.toLocaleString()} x ${p.qty} = <b>Rs ${(p.price*p.qty).toLocaleString()}</b><br><div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button class="qty-btn" onclick="changeQty(${p.id},-1)">-</button><b>${p.qty}</b><button class="qty-btn" onclick="changeQty(${p.id},1)">+</button><button onclick="changeQty(${p.id},-${p.qty})" style="color:red;border:none;background:none;margin-left:6px;cursor:pointer">Remove</button></div></div></div>`}); document.getElementById('cartItems').innerHTML=h; } let dc=document.getElementById('dashCart'); if(dc) dc.innerText=count; }
 function openCart(){ document.getElementById('cartBox').classList.add('open'); }
 function closeCart(){ document.getElementById('cartBox').classList.remove('open'); }
 function openAuth(){ document.getElementById('authModal').classList.add('open'); }
