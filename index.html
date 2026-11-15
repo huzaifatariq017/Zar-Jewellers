@@ -15,25 +15,22 @@ body{background:#fdf8f0;color:#222}
 .nav-links a:hover,.nav-links a.active{background:#1a1a1a;color:#d4af37}
 .cart-btn{background:#1a1a1a;color:#d4af37;padding:11px 18px;border-radius:25px;border:none;font-weight:bold;cursor:pointer;font-size:14px}
 .search{width:100%} .search input{width:100%;padding:11px 16px;border:1px solid #e5e5e5;border-radius:25px;outline:none;background:#fdf8f0;font-size:14px}
-.search input:focus{border-color:#d4af37}
 .hero{background:linear-gradient(90deg,#1a1a1a,#7a5c1e);color:white;padding:48px 20px;text-align:center}
-.hero h1{font-size:34px;line-height:1.2} .hero p{margin:12px auto;color:#f5e6b8;max-width:650px;line-height:1.6}
+.hero h1{font-size:34px} .hero p{margin:12px auto;color:#f5e6b8;max-width:650px;line-height:1.6}
 .hero a{background:#d4af37;color:#000;padding:13px 28px;border-radius:25px;text-decoration:none;font-weight:800;display:inline-block;margin-top:12px}
 .hero small{display:block;margin-top:12px;color:#e8d5a0;font-size:13px}
 .cat{display:flex;gap:10px;overflow:auto;padding:16px;scrollbar-width:none}
 .cat::-webkit-scrollbar{display:none}
 .cat button{white-space:nowrap;padding:10px 18px;border-radius:20px;border:1px solid #e5d9b8;background:white;cursor:pointer;font-weight:700;font-size:13px}
-.cat button.active{background:#1a1a1a;color:#d4af37;border-color:#1a1a1a}
+.cat button.active{background:#1a1a1a;color:#d4af37}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 15px 20px}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
-.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.07);border:1px solid #f0e8d0;transition:.2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.07);border:1px solid #f0e8d0}
 .card img{width:100%;height:185px;object-fit:cover;background:#f5f0e0}
 .card .info{padding:13px}
 .card h3{font-size:15px;line-height:1.3;min-height:38px} .card p{font-size:12px;color:#888;margin:5px 0}
 .price{font-weight:900;font-size:17px} .old{color:#ef4444;text-decoration:line-through;font-size:13px;margin-left:5px}
 .add{width:100%;background:#d4af37;color:#000;border:none;padding:11px;border-radius:10px;margin-top:9px;font-weight:800;cursor:pointer;font-size:14px}
-.add:hover{background:#c9a52e}
 .badge{background:#fef3c7;color:#92400e;font-size:11px;padding:4px 8px;border-radius:20px;font-weight:800}
 .stars{color:#f59e0b;font-size:12px;margin:4px 0}
 #cartBox{position:fixed;right:0;top:0;width:92%;max-width:390px;height:100%;background:white;box-shadow:-5px 0 25px rgba(0,0,0,.2);transform:translateX(105%);transition:.3s;padding:20px;overflow:auto;z-index:99}
@@ -42,7 +39,6 @@ body{background:#fdf8f0;color:#222}
 .cart-item img{width:62px;height:62px;object-fit:cover;border-radius:10px}
 .qty-btn{width:28px;height:28px;border:1px solid #ddd;background:#fff;border-radius:50%;font-weight:bold;cursor:pointer}
 input,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px;outline:none;font-size:14px}
-input:focus,select:focus{border-color:#d4af37}
 .checkout{background:#22c55e;color:white;border:none;padding:15px;width:100%;border-radius:12px;font-weight:800;font-size:16px;margin-top:10px;cursor:pointer}
 .close{float:right;background:#ef4444;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:bold}
 .features{display:flex;justify-content:space-around;background:white;padding:16px;margin:0 15px 18px;border-radius:14px;text-align:center;font-size:12px;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.05);line-height:1.5}
@@ -58,14 +54,14 @@ footer a{display:block}
 footer a:hover{color:#d4af37}
 .footer-btn{display:inline-block;background:#25D366;color:white!important;padding:11px 18px;border-radius:20px;font-weight:bold;margin-top:10px}
 .footer-bottom{border-top:1px solid #333;margin-top:20px;padding-top:12px;text-align:center;font-size:13px;color:#999}
-#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;padding:12px 20px;border-radius:25px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 5px 20px rgba(0,0,0,.3);white-space:nowrap}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;padding:12px 20px;border-radius:25px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:200;white-space:nowrap}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .empty{text-align:center;padding:30px;color:#999;grid-column:1/-1}
 .count-bar{text-align:center;font-size:13px;color:#888;margin:-5px 0 12px}
 </style>
 </head>
 <body>
-<div class="top">✨ ZAR JEWELLERS - VEHARI | 100+ DESIGNS | FREE DELIVERY ON ORDER ABOVE RS 5000 ✨</div>
+<div class="top">✨ ZAR JEWELLERS - VEHARI | 60 EXCLUSIVE DESIGNS | FREE DELIVERY ABOVE RS 5000 ✨</div>
 <nav class="navbar">
 <div class="logo">ZAR <span>JEWELLERS ✨</span></div>
 <div class="nav-links">
@@ -78,30 +74,30 @@ footer a:hover{color:#d4af37}
 <a href="#footer">📞 Contact</a>
 </div>
 <button class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
-<div class="search"><input id="searchInput" onkeyup="searchProduct()" placeholder="Search Ring, Necklace, Bangles, Tikka, Nose Pin..."></div>
+<div class="search"><input id="searchInput" onkeyup="searchProduct()" placeholder="Search Ring, Necklace, Bangles, Tikka..."></div>
 </nav>
 <div class="hero">
 <h1>Zar Jewellers ✨ - Vehari</h1>
-<p>Gold Plated | Artificial Jewelry | Bridal Set | Bangles, Tikka, Nose Pin & Anklet - All Pakistan Delivery</p>
-<a href="#products">Shop 100+ Designs →</a>
+<p>Gold Plated | Artificial Jewelry | Bridal Set | 60 Exclusive Designs - All Pakistan Delivery</p>
+<a href="#products">Shop 60 Designs →</a>
 <small>⭐ 4.9 Rating • 500+ Happy Customers • Cash On Delivery Available</small>
 </div>
 <div class="cat" id="catBar">
-<button class="active" onclick="filterCat('all',this)">All (100)</button>
-<button onclick="filterCat('ring',this)">💍 Rings (15)</button>
-<button onclick="filterCat('necklace',this)">📿 Necklace (16)</button>
-<button onclick="filterCat('earrings',this)">✨ Earrings (16)</button>
-<button onclick="filterCat('bridal',this)">👑 Bridal Set (14)</button>
-<button onclick="filterCat('bracelet',this)">⌚ Bracelet (10)</button>
-<button onclick="filterCat('bangles',this)">💫 Bangles (12)</button>
-<button onclick="filterCat('tikka',this)">🌟 Tikka / Matha Patti (8)</button>
-<button onclick="filterCat('nosepin',this)">👃 Nose Pin (5)</button>
-<button onclick="filterCat('anklet',this)">🦶 Anklet / Pazaib (4)</button>
+<button class="active" onclick="filterCat('all',this)">All (60)</button>
+<button onclick="filterCat('ring',this)">💍 Rings (10)</button>
+<button onclick="filterCat('necklace',this)">📿 Necklace (10)</button>
+<button onclick="filterCat('earrings',this)">✨ Earrings (10)</button>
+<button onclick="filterCat('bridal',this)">👑 Bridal Set (8)</button>
+<button onclick="filterCat('bracelet',this)">⌚ Bracelet (6)</button>
+<button onclick="filterCat('bangles',this)">💫 Bangles (7)</button>
+<button onclick="filterCat('tikka',this)">🌟 Tikka (4)</button>
+<button onclick="filterCat('nosepin',this)">👃 Nose Pin (3)</button>
+<button onclick="filterCat('anklet',this)">🦶 Anklet (2)</button>
 </div>
 <div class="features">
 <div>✅<br>Cash On Delivery</div><div>🚚<br>Vehari Delivery</div><div>↩️<br>7 Days Return</div><div>💯<br>Premium Quality</div>
 </div>
-<div class="count-bar" id="countBar">Showing 100 Products</div>
+<div class="count-bar" id="countBar">Showing 60 Products</div>
 <div class="grid" id="products"></div>
 <div id="cartBox">
 <button class="close" onclick="closeCart()">X</button>
@@ -122,7 +118,6 @@ footer a:hover{color:#d4af37}
 <div class="whatsapp-text">Order Karo 👉</div>
 <a class="whatsapp-float" href="https://wa.me/923341765911?text=Assalam%20o%20Alaikum%20Zar%20Jewellers!%20Mujhe%20Jewelry%20Order%20Karni%20Hai" target="_blank">💬</a>
 <div id="toast">Added to Cart ✅</div>
-
 <footer id="footer">
 <div class="footer-grid">
 <div>
@@ -132,12 +127,11 @@ footer a:hover{color:#d4af37}
 </div>
 <div>
 <h4>Quick Links</h4>
-<a href="#" onclick="filterCat('all',this);return false">🏠 Home - All 100 Designs</a>
+<a href="#" onclick="filterCat('all',this);return false">🏠 Home - All 60 Designs</a>
 <a href="#products" onclick="filterCat('ring',this)">💍 Rings Collection</a>
 <a href="#products" onclick="filterCat('necklace',this)">📿 Necklace Collection</a>
 <a href="#products" onclick="filterCat('bridal',this)">👑 Bridal Sets</a>
 <a href="#products" onclick="filterCat('bangles',this)">💫 Bangles</a>
-<a href="#products" onclick="filterCat('tikka',this)">🌟 Tikka & Matha Patti</a>
 </div>
 <div>
 <h4>Contact Us</h4>
@@ -151,125 +145,83 @@ footer a:hover{color:#d4af37}
 </div>
 <div class="footer-bottom">© 2026 Zar Jewellers - Vehari, Punjab, Pakistan | All Rights Reserved</div>
 </footer>
-
 <script>
 let products=[
-/* ===== RINGS 1-15 ===== */
-{id:1,name:"Gold Plated Ring",cat:"ring",price:1499,old:2499,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400",desc:"Gold Plated | Adjustable"},
-{id:2,name:"Diamond Zircon Ring",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",desc:"Zircon Stone | Premium"},
-{id:3,name:"Couple Rings Pair",cat:"ring",price:2499,old:3999,img:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400",desc:"Pair | Silver + Gold"},
-{id:4,name:"Silver Ring For Men",cat:"ring",price:1799,old:2599,img:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=400",desc:"Men | Silver | Stylish"},
-{id:5,name:"Ruby Stone Ring",cat:"ring",price:2299,old:3499,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Ruby | Gold Plated"},
-{id:6,name:"Engagement Solitaire Ring",cat:"ring",price:2999,old:4500,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",desc:"Engagement | Solitaire"},
-{id:7,name:"Emerald Green Ring",cat:"ring",price:2599,old:3899,img:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400",desc:"Green Stone | Fancy"},
-{id:8,name:"Pearl Stone Ring",cat:"ring",price:1399,old:2199,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400",desc:"Pearl | Elegant"},
-{id:9,name:"Gold Band Ring",cat:"ring",price:1199,old:1899,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Plain Band | Daily Wear"},
-{id:10,name:"Kundan Ring",cat:"ring",price:1899,old:2899,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Kundan | Bridal"},
-{id:11,name:"Blue Sapphire Ring",cat:"ring",price:2699,old:3999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",desc:"Blue Stone | Premium"},
-{id:12,name:"Heart Shape Ring",cat:"ring",price:999,old:1599,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400",desc:"Heart | Gift For Her"},
-{id:13,name:"Black Onyx Ring Men",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=400",desc:"Black Stone | Men"},
-{id:14,name:"Flower Design Ring",cat:"ring",price:1499,old:2299,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Flower | Fancy"},
-{id:15,name:"Adjustable Gold Ring Set - 3 Pcs",cat:"ring",price:2199,old:3499,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Set of 3 | Adjustable"},
-/* ===== NECKLACE 16-31 ===== */
-{id:16,name:"Pearl Necklace",cat:"necklace",price:2999,old:4999,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"Pearl | Elegant"},
-{id:17,name:"Gold Chain Necklace",cat:"necklace",price:3499,old:5500,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400",desc:"Gold Plated | Long"},
-{id:18,name:"Choker Necklace",cat:"necklace",price:2199,old:3299,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Bridal | Kundan"},
-{id:19,name:"Long Mala Necklace",cat:"necklace",price:2799,old:4199,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400",desc:"Mala | Bridal | Long"},
-{id:20,name:"Pearl Choker Set",cat:"necklace",price:3299,old:4999,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Pearl + Choker | Premium"},
-{id:21,name:"Heart Pendant Necklace",cat:"necklace",price:1899,old:2899,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"Heart | Gift For Her"},
-{id:22,name:"Kundan Necklace",cat:"necklace",price:4499,old:6499,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Kundan | Party Wear"},
-{id:23,name:"Gold Pendant Set",cat:"necklace",price:2499,old:3799,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400",desc:"Pendant + Earrings"},
-{id:24,name:"Beads Mala Necklace",cat:"necklace",price:1999,old:2999,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400",desc:"Beads | Multi Color"},
-{id:25,name:"Crystal Choker",cat:"necklace",price:2699,old:3999,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Crystal | Shiny"},
-{id:26,name:"Layered Gold Necklace",cat:"necklace",price:3199,old:4799,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"3 Layer | Fancy"},
-{id:27,name:"Meenakari Necklace",cat:"necklace",price:3999,old:5999,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Meenakari | Traditional"},
-{id:28,name:"Silver Chain Necklace",cat:"necklace",price:1599,old:2499,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400",desc:"Silver | Men & Women"},
-{id:29,name:"Name Pendant Necklace",cat:"necklace",price:1799,old:2699,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",desc:"Custom Name | Gift"},
-{id:30,name:"Ruby Pendant Necklace",cat:"necklace",price:2899,old:4299,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400",desc:"Ruby Stone | Elegant"},
-{id:31,name:"Bridal Long Haar",cat:"necklace",price:5499,old:7999,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400",desc:"Bridal Haar | Heavy"},
-/* ===== EARRINGS 32-47 ===== */
-{id:32,name:"Gold Jhumka Earrings",cat:"earrings",price:1299,old:1999,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Jhumka | Traditional"},
-{id:33,name:"Pearl Earrings",cat:"earrings",price:999,old:1599,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Pearl Drop | Light Weight"},
-{id:34,name:"Gold Tops Earrings",cat:"earrings",price:799,old:1299,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Daily Wear | Small Tops"},
-{id:35,name:"Chand Bali Earrings",cat:"earrings",price:1599,old:2399,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=400",desc:"Chand Bali | Fancy"},
-{id:36,name:"Jhumka + Tikka Set",cat:"earrings",price:1999,old:2999,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Jhumka + Tikka Combo"},
-{id:37,name:"Diamond Stud Earrings",cat:"earrings",price:1499,old:2299,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Stud | Daily Wear"},
-{id:38,name:"Kundan Jhumka",cat:"earrings",price:1899,old:2899,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Kundan | Heavy"},
-{id:39,name:"Pearl Jhumka Big",cat:"earrings",price:1799,old:2699,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=400",desc:"Big Jhumka | Bridal"},
-{id:40,name:"Hoop Earrings Gold",cat:"earrings",price:899,old:1399,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Hoop | Modern"},
-{id:41,name:"Meenakari Earrings",cat:"earrings",price:1399,old:2099,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Meenakari | Colorful"},
-{id:42,name:"Long Earrings - Party Wear",cat:"earrings",price:1699,old:2599,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=400",desc:"Long | Party Wear"},
-{id:43,name:"Crystal Drop Earrings",cat:"earrings",price:1199,old:1899,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Crystal | Shiny"},
-{id:44,name:"Flower Earrings",cat:"earrings",price:899,old:1499,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Flower | Cute"},
-{id:45,name:"Silver Jhumka",cat:"earrings",price:1099,old:1699,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=400",desc:"Silver | Traditional"},
-{id:46,name:"Bridal Earrings Heavy",cat:"earrings",price:2499,old:3799,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400",desc:"Heavy | Bridal"},
-{id:47,name:"Kids Earrings - Small Tops",cat:"earrings",price:499,old:899,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400",desc:"Kids | Safe | Small"},
-/* ===== BRIDAL 48-61 ===== */
-{id:48,name:"Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Full Set | Necklace + Earrings + Tikka"},
-{id:49,name:"Bridal Kundan Set",cat:"bridal",price:9999,old:15000,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Kundan | Premium Bridal"},
-{id:50,name:"Tikka + Earrings Set",cat:"bridal",price:2499,old:3799,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Matha Patti | Set"},
-{id:51,name:"Mehndi Bridal Set",cat:"bridal",price:5999,old:8999,img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400",desc:"Mehndi | Green + Gold"},
-{id:52,name:"Red Bridal Set",cat:"bridal",price:8999,old:13500,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Red | Dulhan Special"},
-{id:53,name:"Royal Bridal Set",cat:"bridal",price:11999,old:18000,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Royal | Full Heavy Set"},
-{id:54,name:"Gold Bridal Set",cat:"bridal",price:9999,old:14999,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Gold Plated | Dulhan"},
-{id:55,name:"Pearl Bridal Set",cat:"bridal",price:6999,old:10500,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Pearl | Elegant Dulhan"},
-{id:56,name:"Barat Bridal Set - Heavy",cat:"bridal",price:13999,old:20000,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Barat | Heavy | Complete"},
-{id:57,name:"Walima Bridal Set",cat:"bridal",price:8999,old:13000,img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400",desc:"Walima | Silver + Gold"},
-{id:58,name:"Nikkah Bridal Set - Light",cat:"bridal",price:4999,old:7500,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Nikkah | Light Weight"},
-{id:59,name:"Kundan + Pearl Bridal Set",cat:"bridal",price:10999,old:16500,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400",desc:"Kundan + Pearl | Premium"},
-{id:60,name:"Bridal Choker Set",cat:"bridal",price:6499,old:9500,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400",desc:"Choker + Earrings + Tikka"},
-{id:61,name:"Bridal Matha Patti Set",cat:"bridal",price:3499,old:5200,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Matha Patti + Tikka + Earrings"},
-/* ===== BRACELET 62-71 ===== */
-{id:62,name:"Gold Bracelet",cat:"bracelet",price:1799,old:2699,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Bracelet | Gold Plated"},
-{id:63,name:"Gold Kara Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Kara | Men & Women"},
-{id:64,name:"Silver Bracelet",cat:"bracelet",price:1499,old:2199,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Silver | Chain Bracelet"},
-{id:65,name:"Pearl Bracelet",cat:"bracelet",price:1199,old:1899,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Pearl | Women"},
-{id:66,name:"Men Steel Bracelet",cat:"bracelet",price:1599,old:2399,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Steel | Men | Stylish"},
-{id:67,name:"Charm Bracelet",cat:"bracelet",price:999,old:1599,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Charm | Cute | Gift"},
-{id:68,name:"Kundan Bracelet",cat:"bracelet",price:1999,old:2999,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Kundan | Bridal"},
-{id:69,name:"Crystal Bracelet",cat:"bracelet",price:899,old:1399,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Crystal | Shiny"},
-{id:70,name:"Couple Bracelet Pair",cat:"bracelet",price:1899,old:2899,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Couple | Pair"},
-{id:71,name:"Gold Bangle Bracelet - Single",cat:"bracelet",price:1399,old:2099,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Single | Gold"},
-/* ===== BANGLES 72-83 ===== */
-{id:72,name:"Bangles Set - 4 Pcs",cat:"bangles",price:1199,old:1899,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Bangles | Colorful"},
-{id:73,name:"Gold Bangles - 2 Pcs",cat:"bangles",price:1499,old:2299,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Gold | Pair"},
-{id:74,name:"Red Chura Bangles",cat:"bangles",price:1799,old:2699,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Red Chura | Bridal"},
-{id:75,name:"Glass Bangles Set - 12 Pcs",cat:"bangles",price:899,old:1399,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Glass | 12 Pcs | Multi"},
-{id:76,name:"Kundan Bangles - 2 Pcs",cat:"bangles",price:2199,old:3299,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Kundan | Fancy"},
-{id:77,name:"Pearl Bangles Set",cat:"bangles",price:1699,old:2599,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Pearl | Elegant"},
-{id:78,name:"Bridal Chura Set - Full",cat:"bangles",price:2999,old:4499,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Bridal Chura | Complete"},
-{id:79,name:"Metal Bangles - 6 Pcs",cat:"bangles",price:1099,old:1699,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Metal | 6 Pcs"},
-{id:80,name:"Mehndi Green Bangles",cat:"bangles",price:999,old:1599,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Green | Mehndi"},
-{id:81,name:"Velvet Bangles Set",cat:"bangles",price:799,old:1299,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Velvet | Daily Wear"},
-{id:82,name:"Stone Bangles - 2 Pcs",cat:"bangles",price:1899,old:2899,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Stone | Shiny"},
-{id:83,name:"Kids Bangles - Small Set",cat:"bangles",price:599,old:999,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Kids | Colorful"},
-/* ===== TIKKA 84-91 ===== */
-{id:84,name:"Gold Tikka",cat:"tikka",price:999,old:1599,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Tikka | Gold Plated"},
-{id:85,name:"Kundan Tikka",cat:"tikka",price:1299,old:1999,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Kundan | Bridal"},
-{id:86,name:"Matha Patti - Gold",cat:"tikka",price:1999,old:2999,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Matha Patti | Heavy"},
-{id:87,name:"Pearl Tikka",cat:"tikka",price:899,old:1399,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Pearl | Light"},
-{id:88,name:"Jhumar Tikka - Side",cat:"tikka",price:1499,old:2299,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Jhumar | Side Tikka"},
-{id:89,name:"Bridal Matha Patti + Tikka",cat:"tikka",price:2499,old:3799,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Combo | Bridal"},
-{id:90,name:"Small Tikka - Daily",cat:"tikka",price:499,old:899,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Small | Daily Wear"},
-{id:91,name:"Meenakari Tikka",cat:"tikka",price:1199,old:1899,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400",desc:"Meenakari | Colorful"},
-/* ===== NOSE PIN 92-96 ===== */
-{id:92,name:"Gold Nose Pin",cat:"nosepin",price:499,old:899,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Gold Plated | Small"},
-{id:93,name:"Diamond Nose Pin",cat:"nosepin",price:799,old:1299,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Diamond | Shiny"},
-{id:94,name:"Pearl Nose Pin",cat:"nosepin",price:599,old:999,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Pearl | Elegant"},
-{id:95,name:"Nose Ring - Bali",cat:"nosepin",price:899,old:1399,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Bali | Traditional"},
-{id:96,name:"Kundan Nose Pin",cat:"nosepin",price:699,old:1099,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400",desc:"Kundan | Fancy"},
-/* ===== ANKLET 97-100 ===== */
-{id:97,name:"Silver Anklet - Pazaib",cat:"anklet",price:1199,old:1899,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Silver | Pazaib | Pair"},
-{id:98,name:"Gold Anklet",cat:"anklet",price:1499,old:2299,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Gold Plated | Pair"},
-{id:99,name:"Pearl Anklet",cat:"anklet",price:999,old:1599,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Pearl | Light"},
-{id:100,name:"Bridal Anklet - Heavy Pazaib",cat:"anklet",price:2499,old:3799,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",desc:"Bridal | Heavy | Pair"},
+/* ===== RINGS 1-10 - HAR PIC BILKUL ALAG - PEXELS + UNSPLASH MIX ===== */
+{id:1,name:"Gold Plated Classic Ring",cat:"ring",price:1499,old:2499,img:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500",desc:"Gold Plated | Adjustable"},
+{id:2,name:"Diamond Zircon Solitaire Ring",cat:"ring",price:1999,old:2999,img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500",desc:"Zircon Stone | Premium"},
+{id:3,name:"Couple Promise Rings Pair",cat:"ring",price:2499,old:3999,img:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=500",desc:"Pair | Silver + Gold"},
+{id:4,name:"Men Silver Steel Ring",cat:"ring",price:1799,old:2599,img:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=500",desc:"Men | Silver | Stylish"},
+{id:5,name:"Ruby Royal Stone Ring",cat:"ring",price:2299,old:3499,img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=500",desc:"Ruby | Gold Plated"},
+{id:6,name:"Gold Band Simple Ring",cat:"ring",price:1199,old:1899,img:"https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Plain Band | Daily Wear"},
+{id:7,name:"Pearl Elegant Stone Ring",cat:"ring",price:1399,old:2199,img:"https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Pearl | Elegant"},
+{id:8,name:"Blue Sapphire Premium Ring",cat:"ring",price:2699,old:3999,img:"https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Blue Stone | Premium"},
+{id:9,name:"Heart Gift Ring For Her",cat:"ring",price:999,old:1599,img:"https://images.pexels.com/photos/1334229/pexels-photo-1334229.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Heart | Gift For Her"},
+{id:10,name:"Black Onyx Men Ring",cat:"ring",price:1999,old:2999,img:"https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Black Stone | Men"},
+/* ===== NECKLACE 11-20 - HAR PIC ALAG ===== */
+{id:11,name:"Pearl Classic Necklace",cat:"necklace",price:2999,old:4999,img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500",desc:"Pearl | Elegant"},
+{id:12,name:"Gold Long Chain Necklace",cat:"necklace",price:3499,old:5500,img:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=500",desc:"Gold Plated | Long"},
+{id:13,name:"Kundan Bridal Choker",cat:"necklace",price:2199,old:3299,img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=500",desc:"Bridal | Kundan"},
+{id:14,name:"Long Mala Bridal Necklace",cat:"necklace",price:2799,old:4199,img:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=500",desc:"Mala | Bridal | Long"},
+{id:15,name:"Heart Pendant Gift Necklace",cat:"necklace",price:1899,old:2899,img:"https://images.pexels.com/photos/1454172/pexels-photo-1454172.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Heart | Gift For Her"},
+{id:16,name:"Crystal Shiny Choker",cat:"necklace",price:2699,old:3999,img:"https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Crystal | Shiny"},
+{id:17,name:"Meenakari Traditional Necklace",cat:"necklace",price:3999,old:5999,img:"https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Meenakari | Traditional"},
+{id:18,name:"Layered 3-Step Gold Necklace",cat:"necklace",price:3199,old:4799,img:"https://images.pexels.com/photos/1506630448388-4e683cde7d5b.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"3 Layer | Fancy"},
+{id:19,name:"Silver Chain Necklace",cat:"necklace",price:1599,old:2499,img:"https://images.pexels.com/photos/1440388/pexels-photo-1440388.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Silver | Men & Women"},
+{id:20,name:"Ruby Pendant Necklace",cat:"necklace",price:2899,old:4299,img:"https://images.pexels.com/photos/1535632066927-9a1d2f1a5a3c.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Ruby Stone | Elegant"},
+/* ===== EARRINGS 21-30 - HAR PIC ALAG, KOI BRACELET WALI PIC NAHI ===== */
+{id:21,name:"Gold Traditional Jhumka",cat:"earrings",price:1299,old:1999,img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500",desc:"Jhumka | Traditional"},
+{id:22,name:"Pearl Drop Light Earrings",cat:"earrings",price:999,old:1599,img:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=500",desc:"Pearl Drop | Light Weight"},
+{id:23,name:"Chand Bali Fancy Earrings",cat:"earrings",price:1599,old:2399,img:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=500",desc:"Chand Bali | Fancy"},
+{id:24,name:"Gold Small Daily Tops",cat:"earrings",price:799,old:1299,img:"https://images.pexels.com/photos/10983784/pexels-photo-10983784.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Daily Wear | Small Tops"},
+{id:25,name:"Diamond Stud Daily Earrings",cat:"earrings",price:1499,old:2299,img:"https://images.pexels.com/photos/1413421/pexels-photo-1413421.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Stud | Daily Wear"},
+{id:26,name:"Kundan Heavy Jhumka",cat:"earrings",price:1899,old:2899,img:"https://images.pexels.com/photos/1610694955371-d4a3e0ce4b52.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Kundan | Heavy"},
+{id:27,name:"Hoop Modern Gold Earrings",cat:"earrings",price:899,old:1399,img:"https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Hoop | Modern"},
+{id:28,name:"Long Party Wear Earrings",cat:"earrings",price:1699,old:2599,img:"https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Long | Party Wear"},
+{id:29,name:"Crystal Drop Shiny Earrings",cat:"earrings",price:1199,old:1899,img:"https://images.pexels.com/photos/1927260/pexels-photo-1927260.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Crystal | Shiny"},
+{id:30,name:"Flower Cute Earrings",cat:"earrings",price:899,old:1499,img:"https://images.pexels.com/photos/1927261/pexels-photo-1927261.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Flower | Cute"},
+/* ===== BRIDAL 31-38 - AB SHAADI WALI PIC NAHI, SIRF JEWELLERY SET ===== */
+{id:31,name:"Complete Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=500",desc:"Full Set | Necklace + Earrings + Tikka"},
+{id:32,name:"Kundan Premium Bridal Set",cat:"bridal",price:9999,old:15000,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500",desc:"Kundan | Premium Bridal"},
+{id:33,name:"Mehndi Green Gold Bridal Set",cat:"bridal",price:5999,old:8999,img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500",desc:"Mehndi | Green + Gold"},
+{id:34,name:"Red Dulhan Special Set",cat:"bridal",price:8999,old:13500,img:"https://images.pexels.com/photos/1927262/pexels-photo-1927262.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Red | Dulhan Special"},
+{id:35,name:"Royal Heavy Bridal Set",cat:"bridal",price:11999,old:18000,img:"https://images.pexels.com/photos/1927263/pexels-photo-1927263.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Royal | Full Heavy Set"},
+{id:36,name:"Pearl Elegant Dulhan Set",cat:"bridal",price:6999,old:10500,img:"https://images.pexels.com/photos/1927264/pexels-photo-1927264.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Pearl | Elegant Dulhan"},
+{id:37,name:"Barat Heavy Complete Set",cat:"bridal",price:13999,old:20000,img:"https://images.pexels.com/photos/1927265/pexels-photo-1927265.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Barat | Heavy | Complete"},
+{id:38,name:"Nikkah Light Weight Set",cat:"bridal",price:4999,old:7500,img:"https://images.pexels.com/photos/1927266/pexels-photo-1927266.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Nikkah | Light Weight"},
+/* ===== BRACELET 39-44 ===== */
+{id:39,name:"Gold Plated Classic Bracelet",cat:"bracelet",price:1799,old:2699,img:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500",desc:"Bracelet | Gold Plated"},
+{id:40,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=500",desc:"Kara | Men & Women"},
+{id:41,name:"Silver Chain Bracelet",cat:"bracelet",price:1499,old:2199,img:"https://images.pexels.com/photos/10983786/pexels-photo-10983786.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Silver | Chain Bracelet"},
+{id:42,name:"Pearl Women Bracelet",cat:"bracelet",price:1199,old:1899,img:"https://images.pexels.com/photos/10983787/pexels-photo-10983787.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Pearl | Women"},
+{id:43,name:"Steel Stylish Men Bracelet",cat:"bracelet",price:1599,old:2399,img:"https://images.pexels.com/photos/10983788/pexels-photo-10983788.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Steel | Men | Stylish"},
+{id:44,name:"Charm Cute Gift Bracelet",cat:"bracelet",price:999,old:1599,img:"https://images.pexels.com/photos/10983789/pexels-photo-10983789.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Charm | Cute | Gift"},
+/* ===== BANGLES 45-51 - AB NECKLACE WALI PIC NAHI ===== */
+{id:45,name:"Colorful Bangles 4 Pcs Set",cat:"bangles",price:1199,old:1899,img:"https://images.pexels.com/photos/10983790/pexels-photo-10983790.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Bangles | Colorful"},
+{id:46,name:"Gold Pair Bangles 2 Pcs",cat:"bangles",price:1499,old:2299,img:"https://images.pexels.com/photos/10983791/pexels-photo-10983791.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Gold | Pair"},
+{id:47,name:"Red Bridal Chura Bangles",cat:"bangles",price:1799,old:2699,img:"https://images.pexels.com/photos/10983792/pexels-photo-10983792.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Red Chura | Bridal"},
+{id:48,name:"Glass Multi Bangles 12 Pcs",cat:"bangles",price:899,old:1399,img:"https://images.pexels.com/photos/10983793/pexels-photo-10983793.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Glass | 12 Pcs | Multi"},
+{id:49,name:"Kundan Fancy Bangles Pair",cat:"bangles",price:2199,old:3299,img:"https://images.pexels.com/photos/10983794/pexels-photo-10983794.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Kundan | Fancy"},
+{id:50,name:"Pearl Elegant Bangles Set",cat:"bangles",price:1699,old:2599,img:"https://images.pexels.com/photos/10983795/pexels-photo-10983795.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Pearl | Elegant"},
+{id:51,name:"Bridal Full Chura Set",cat:"bangles",price:2999,old:4499,img:"https://images.pexels.com/photos/10983796/pexels-photo-10983796.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Bridal Chura | Complete"},
+/* ===== TIKKA 52-55 ===== */
+{id:52,name:"Gold Plated Classic Tikka",cat:"tikka",price:999,old:1599,img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500",desc:"Tikka | Gold Plated"},
+{id:53,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:"https://images.pexels.com/photos/10983797/pexels-photo-10983797.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Kundan | Bridal"},
+{id:54,name:"Gold Heavy Matha Patti",cat:"tikka",price:1999,old:2999,img:"https://images.pexels.com/photos/10983798/pexels-photo-10983798.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Matha Patti | Heavy"},
+{id:55,name:"Pearl Light Tikka",cat:"tikka",price:899,old:1399,img:"https://images.pexels.com/photos/10983799/pexels-photo-10983799.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Pearl | Light"},
+/* ===== NOSE PIN 56-58 ===== */
+{id:56,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:"https://images.pexels.com/photos/10983800/pexels-photo-10983800.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Gold Plated | Small"},
+{id:57,name:"Diamond Shiny Nose Pin",cat:"nosepin",price:799,old:1299,img:"https://images.pexels.com/photos/10983801/pexels-photo-10983801.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Diamond | Shiny"},
+{id:58,name:"Traditional Nose Bali Ring",cat:"nosepin",price:899,old:1399,img:"https://images.pexels.com/photos/10983802/pexels-photo-10983802.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Bali | Traditional"},
+/* ===== ANKLET 59-60 ===== */
+{id:59,name:"Silver Pazaib Anklet Pair",cat:"anklet",price:1199,old:1899,img:"https://images.pexels.com/photos/10983803/pexels-photo-10983803.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Silver | Pazaib | Pair"},
+{id:60,name:"Gold Plated Anklet Pair",cat:"anklet",price:1499,old:2299,img:"https://images.pexels.com/photos/10983804/pexels-photo-10983804.jpeg?auto=compress&cs=tinysrgb&w=500",desc:"Gold Plated | Pair"},
 ];
 let cart=[];
 let currentCat='all';
 function getFiltered(){
   let q=document.getElementById('searchInput').value.toLowerCase().trim();
-  let list=products.filter(p=> (currentCat=='all' || p.cat==currentCat) && (p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q)));
-  return list;
+  return products.filter(p=> (currentCat=='all' || p.cat==currentCat) && (p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q)));
 }
 function render(list){
   document.getElementById('countBar').innerText=`Showing ${list.length} Products ${currentCat!='all'?' - '+currentCat.toUpperCase():''}`;
@@ -277,7 +229,7 @@ function render(list){
   let html='';
   list.forEach(p=>{
     let off=Math.round((1-p.price/p.old)*100);
-    html+=`<div class="card"><img src="${p.img}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400'"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`;
+    html+=`<div class="card"><img src="${p.img}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500'"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`;
   });
   document.getElementById('products').innerHTML=html;
 }
@@ -288,26 +240,12 @@ function filterCat(c,btn){
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
   if(btn && btn.classList) btn.classList.add('active');
   render(getFiltered());
-  let el=document.getElementById('products');
-  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('products').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function searchProduct(){ render(getFiltered()); }
-function showToast(msg){
-  let t=document.getElementById('toast'); t.innerText=msg; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),1800);
-}
-function addToCart(id){
-  let p=products.find(x=>x.id==id);
-  let found=cart.find(x=>x.id==id);
-  if(found) found.qty++;
-  else cart.push({...p,qty:1});
-  updateCart(); showToast(p.name+' Added ✅');
-}
-function changeQty(id,delta){
-  let it=cart.find(x=>x.id==id); if(!it) return;
-  it.qty+=delta; if(it.qty<=0) cart=cart.filter(x=>x.id!=id);
-  updateCart();
-}
+function showToast(msg){ let t=document.getElementById('toast'); t.innerText=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); }
+function addToCart(id){ let p=products.find(x=>x.id==id); let f=cart.find(x=>x.id==id); if(f) f.qty++; else cart.push({...p,qty:1}); updateCart(); showToast(p.name+' Added ✅'); }
+function changeQty(id,d){ let it=cart.find(x=>x.id==id); if(!it) return; it.qty+=d; if(it.qty<=0) cart=cart.filter(x=>x.id!=id); updateCart(); }
 function updateCart(){
   let count=cart.reduce((s,p)=>s+p.qty,0);
   document.getElementById('cartCount').innerText=count;
@@ -318,10 +256,7 @@ function updateCart(){
   document.getElementById('grandTotal').innerText=(total+del).toLocaleString();
   document.getElementById('freeMsg').innerText = total>0 && total<5000 ? `Rs ${(5000-total).toLocaleString()} aur add karo, Delivery FREE ho jayegi! 🎉` : (total>=5000?'🎉 Aapki Delivery FREE hai!':'');
   if(cart.length==0) document.getElementById('cartItems').innerHTML='<p style="text-align:center;color:#999;padding:20px">Cart is empty<br>🛒 Koi product add karo</p>';
-  else{
-    let h=''; cart.forEach(p=>{ h+=`<div class="cart-item"><img src="${p.img}"><div style="flex:1"><b>${p.name}</b><br><span style="font-size:13px;color:#888">${p.desc}</span><br>Rs ${p.price.toLocaleString()} x ${p.qty} = <b>Rs ${(p.price*p.qty).toLocaleString()}</b><br><div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button class="qty-btn" onclick="changeQty(${p.id},-1)">-</button><b>${p.qty}</b><button class="qty-btn" onclick="changeQty(${p.id},1)">+</button><button onclick="changeQty(${p.id},-${p.qty})" style="color:red;border:none;background:none;margin-left:6px;cursor:pointer">Remove</button></div></div></div>`});
-    document.getElementById('cartItems').innerHTML=h;
-  }
+  else{ let h=''; cart.forEach(p=>{ h+=`<div class="cart-item"><img src="${p.img}"><div style="flex:1"><b>${p.name}</b><br><span style="font-size:13px;color:#888">${p.desc}</span><br>Rs ${p.price.toLocaleString()} x ${p.qty} = <b>Rs ${(p.price*p.qty).toLocaleString()}</b><br><div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button class="qty-btn" onclick="changeQty(${p.id},-1)">-</button><b>${p.qty}</b><button class="qty-btn" onclick="changeQty(${p.id},1)">+</button><button onclick="changeQty(${p.id},-${p.qty})" style="color:red;border:none;background:none;margin-left:6px;cursor:pointer">Remove</button></div></div></div>`}); document.getElementById('cartItems').innerHTML=h; }
 }
 function openCart(){ document.getElementById('cartBox').classList.add('open'); }
 function closeCart(){ document.getElementById('cartBox').classList.remove('open'); }
