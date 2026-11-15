@@ -5,50 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZAR JEWELLERS - Vehari | Bridal & Gold Plated Jewelry</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#fdf8f0}
-.top{background:#1a1a1a;color:#d4af37;text-align:center;padding:8px;font-size:13px}
-.navbar{background:white;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;position:sticky;top:0;box-shadow:0 2px 10px #ddd;z-index:20;flex-wrap:wrap}
-.logo{font-size:22px;font-weight:900} .logo span{color:#d4af37}
-.nav-links{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-.nav-links a{text-decoration:none;color:#333;font-weight:bold;font-size:14px;padding:6px 10px;border-radius:20px}
-.nav-links a:hover{background:#1a1a1a;color:#d4af37}
-.cart-btn{background:#1a1a1a;color:#d4af37;padding:10px 18px;border-radius:20px;border:none;font-weight:bold;cursor:pointer}
-.search{width:100%;margin-top:10px} .search input{width:100%;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none}
-.hero{background:linear-gradient(90deg,#1a1a1a,#8b6f2e);color:white;padding:40px 20px;text-align:center}
-.hero h1{font-size:32px} .hero p{margin:10px 0;color:#f5e6b8} .hero a{background:#d4af37;color:black;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:10px}
-.cat{display:flex;gap:10px;overflow:auto;padding:15px}
-.cat button{white-space:nowrap;padding:9px 18px;border-radius:20px;border:1px solid #ddd;background:white;cursor:pointer;font-weight:bold}
-.cat button.active{background:#1a1a1a;color:#d4af37}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 15px 20px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fdf8f0;color:#222}
+.top{background:#1a1a1a;color:#d4af37;text-align:center;padding:9px 10px;font-size:13px;font-weight:bold;letter-spacing:.3px}
+.navbar{background:white;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;position:sticky;top:0;box-shadow:0 2px 15px rgba(0,0,0,.08);z-index:20;flex-wrap:wrap;gap:8px}
+.logo{font-size:23px;font-weight:900;letter-spacing:1px} .logo span{color:#d4af37}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-links a{text-decoration:none;color:#333;font-weight:600;font-size:14px;padding:7px 11px;border-radius:20px}
+.nav-links a:hover,.nav-links a.active{background:#1a1a1a;color:#d4af37}
+.cart-btn{background:#1a1a1a;color:#d4af37;padding:11px 18px;border-radius:25px;border:none;font-weight:bold;cursor:pointer;font-size:14px}
+.search{width:100%} .search input{width:100%;padding:11px 16px;border:1px solid #e5e5e5;border-radius:25px;outline:none;background:#fdf8f0;font-size:14px}
+.search input:focus{border-color:#d4af37}
+.hero{background:linear-gradient(90deg,#1a1a1a,#7a5c1e);color:white;padding:48px 20px;text-align:center}
+.hero h1{font-size:34px;line-height:1.2} .hero p{margin:12px auto;color:#f5e6b8;max-width:600px;line-height:1.6}
+.hero a{background:#d4af37;color:#000;padding:13px 28px;border-radius:25px;text-decoration:none;font-weight:800;display:inline-block;margin-top:12px}
+.hero small{display:block;margin-top:12px;color:#e8d5a0;font-size:13px}
+.cat{display:flex;gap:10px;overflow:auto;padding:16px;scrollbar-width:none}
+.cat::-webkit-scrollbar{display:none}
+.cat button{white-space:nowrap;padding:10px 18px;border-radius:20px;border:1px solid #e5d9b8;background:white;cursor:pointer;font-weight:700;font-size:13px}
+.cat button.active{background:#1a1a1a;color:#d4af37;border-color:#1a1a1a}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 15px 20px}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
-.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px #ddd}
-.card img{width:100%;height:180px;object-fit:cover}
-.card .info{padding:12px}
-.card h3{font-size:15px} .card p{font-size:12px;color:gray;margin:4px 0}
-.price{font-weight:900;font-size:17px} .old{color:red;text-decoration:line-through;font-size:13px;margin-left:5px}
-.add{width:100%;background:#d4af37;color:black;border:none;padding:10px;border-radius:8px;margin-top:8px;font-weight:bold;cursor:pointer}
-.badge{background:#d4af37;color:black;font-size:11px;padding:3px 8px;border-radius:10px;font-weight:bold}
-#cartBox{position:fixed;right:0;top:0;width:90%;max-width:380px;height:100%;background:white;box-shadow:-5px 0 20px #aaa;transform:translateX(100%);transition:0.3s;padding:20px;overflow:auto;z-index:99}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.07);border:1px solid #f0e8d0;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.card img{width:100%;height:185px;object-fit:cover;background:#f5f0e0}
+.card .info{padding:13px}
+.card h3{font-size:15px;line-height:1.3;min-height:38px} .card p{font-size:12px;color:#888;margin:5px 0}
+.price{font-weight:900;font-size:17px} .old{color:#ef4444;text-decoration:line-through;font-size:13px;margin-left:5px}
+.add{width:100%;background:#d4af37;color:#000;border:none;padding:11px;border-radius:10px;margin-top:9px;font-weight:800;cursor:pointer;font-size:14px}
+.add:hover{background:#c9a52e}
+.badge{background:#fef3c7;color:#92400e;font-size:11px;padding:4px 8px;border-radius:20px;font-weight:800}
+.stars{color:#f59e0b;font-size:12px;margin:4px 0}
+#cartBox{position:fixed;right:0;top:0;width:92%;max-width:390px;height:100%;background:white;box-shadow:-5px 0 25px rgba(0,0,0,.2);transform:translateX(105%);transition:.3s;padding:20px;overflow:auto;z-index:99}
 #cartBox.open{transform:translateX(0)}
-.cart-item{display:flex;gap:10px;margin:12px 0;border-bottom:1px solid #eee;padding-bottom:10px}
-.cart-item img{width:60px;height:60px;object-fit:cover;border-radius:8px}
-input,select{width:100%;padding:11px;margin:7px 0;border:1px solid #ddd;border-radius:8px}
-.checkout{background:#22c55e;color:white;border:none;padding:14px;width:100%;border-radius:10px;font-weight:bold;font-size:16px;margin-top:10px}
-.close{float:right;background:red;color:white;border:none;padding:5px 10px;border-radius:5px}
-.features{display:flex;justify-content:space-around;background:white;padding:15px;margin:0 15px 15px;border-radius:12px;text-align:center;font-size:12px}
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:100}
+.cart-item{display:flex;gap:10px;margin:14px 0;border-bottom:1px solid #eee;padding-bottom:12px;align-items:center}
+.cart-item img{width:62px;height:62px;object-fit:cover;border-radius:10px}
+.qty-btn{width:28px;height:28px;border:1px solid #ddd;background:#fff;border-radius:50%;font-weight:bold;cursor:pointer}
+input,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px;outline:none;font-size:14px}
+input:focus,select:focus{border-color:#d4af37}
+.checkout{background:#22c55e;color:white;border:none;padding:15px;width:100%;border-radius:12px;font-weight:800;font-size:16px;margin-top:10px;cursor:pointer}
+.close{float:right;background:#ef4444;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:bold}
+.features{display:flex;justify-content:space-around;background:white;padding:16px;margin:0 15px 18px;border-radius:14px;text-align:center;font-size:12px;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.05);line-height:1.5}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,.3);z-index:100}
 .whatsapp-text{position:fixed;bottom:32px;right:88px;background:white;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:bold;box-shadow:0 2px 10px #ccc;z-index:100}
 footer{background:#111;color:#ddd;padding:30px 20px 15px}
-.footer-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:1000px;margin:auto}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:22px;max-width:1000px;margin:auto}
 @media(min-width:700px){.footer-grid{grid-template-columns:1.5fr 1fr 1.5fr}}
-footer h3{color:#d4af37;margin-bottom:10px;font-size:18px}
+footer h3{color:#d4af37;margin-bottom:10px;font-size:19px}
 footer h4{color:white;margin-bottom:10px}
 footer p,footer a{font-size:14px;line-height:24px;color:#ccc;text-decoration:none}
 footer a{display:block}
 footer a:hover{color:#d4af37}
-.footer-btn{display:inline-block;background:#25D366;color:white!important;padding:10px 18px;border-radius:20px;font-weight:bold;margin-top:10px}
+.footer-btn{display:inline-block;background:#25D366;color:white!important;padding:11px 18px;border-radius:20px;font-weight:bold;margin-top:10px}
 .footer-bottom{border-top:1px solid #333;margin-top:20px;padding-top:12px;text-align:center;font-size:13px;color:#999}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;padding:12px 20px;border-radius:25px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 5px 20px rgba(0,0,0,.3);white-space:nowrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.empty{text-align:center;padding:30px;color:#999;grid-column:1/-1}
 </style>
 </head>
 <body>
@@ -56,7 +68,7 @@ footer a:hover{color:#d4af37}
 <nav class="navbar">
 <div class="logo">ZAR <span>JEWELLERS ✨</span></div>
 <div class="nav-links">
-<a href="#" onclick="filterCat('all',this)">Home</a>
+<a href="#" class="active" onclick="filterCat('all',this);return false">Home</a>
 <a href="#products" onclick="filterCat('ring',this)">💍 Rings</a>
 <a href="#products" onclick="filterCat('necklace',this)">📿 Necklace</a>
 <a href="#products" onclick="filterCat('earrings',this)">✨ Earrings</a>
@@ -71,8 +83,9 @@ footer a:hover{color:#d4af37}
 <h1>Zar Jewellers ✨ - Vehari</h1>
 <p>Gold Plated | Artificial Jewelry | Bridal Set | Vehari - All Pakistan Delivery</p>
 <a href="#products">Shop Now →</a>
+<small>⭐ 4.9 Rating • 500+ Happy Customers • Cash On Delivery Available</small>
 </div>
-<div class="cat">
+<div class="cat" id="catBar">
 <button class="active" onclick="filterCat('all',this)">All (30)</button>
 <button onclick="filterCat('ring',this)">💍 Rings</button>
 <button onclick="filterCat('necklace',this)">📿 Necklace</button>
@@ -88,10 +101,12 @@ footer a:hover{color:#d4af37}
 <button class="close" onclick="closeCart()">X</button>
 <h2>Your Cart 🛒</h2>
 <div id="cartItems"><p>Cart is empty</p></div>
-<hr>
-<h3>Total: Rs <span id="cartTotal">0</span></h3>
-<p style="font-size:13px;color:gray">Delivery: Rs 250 (Free if order > 5000)</p>
-<h3 style="margin-top:15px">Checkout Details</h3>
+<hr style="margin:12px 0">
+<div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b>Rs <span id="cartTotal">0</span></b></div>
+<div style="display:flex;justify-content:space-between;margin-top:6px;font-size:13px;color:gray"><span>Delivery:</span><span id="delCharge">Rs 250</span></div>
+<div style="display:flex;justify-content:space-between;margin-top:8px;font-size:17px"><b>Total:</b><b style="color:#16a34a">Rs <span id="grandTotal">0</span></b></div>
+<p id="freeMsg" style="font-size:13px;color:#16a34a;margin-top:6px;font-weight:bold"></p>
+<h3 style="margin-top:16px">Checkout Details</h3>
 <input id="cname" placeholder="Your Full Name">
 <input id="cphone" placeholder="Phone Number - 03xx-xxxxxxx">
 <input id="caddress" placeholder="Full Address - Vehari, Punjab">
@@ -100,6 +115,7 @@ footer a:hover{color:#d4af37}
 </div>
 <div class="whatsapp-text">Order Karo 👉</div>
 <a class="whatsapp-float" href="https://wa.me/923341765911?text=Assalam%20o%20Alaikum%20Zar%20Jewellers!%20Mujhe%20Jewelry%20Order%20Karni%20Hai" target="_blank">💬</a>
+<div id="toast">Added to Cart ✅</div>
 
 <footer id="footer">
 <div class="footer-grid">
@@ -110,7 +126,7 @@ footer a:hover{color:#d4af37}
 </div>
 <div>
 <h4>Quick Links</h4>
-<a href="#" onclick="filterCat('all',this)">🏠 Home</a>
+<a href="#" onclick="filterCat('all',this);return false">🏠 Home</a>
 <a href="#products" onclick="filterCat('ring',this)">💍 Rings Collection</a>
 <a href="#products" onclick="filterCat('necklace',this)">📿 Necklace Collection</a>
 <a href="#products" onclick="filterCat('bridal',this)">👑 Bridal Sets</a>
@@ -165,50 +181,84 @@ let products=[
 {id:30,name:"Bangles Set - 4 Pcs",cat:"bracelet",price:1199,old:1899,img:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400",desc:"Bangles | Colorful"},
 ];
 let cart=[];
+let currentCat='all';
+function getFiltered(){
+  let q=document.getElementById('searchInput').value.toLowerCase().trim();
+  let list=products.filter(p=> (currentCat=='all' || p.cat==currentCat) && p.name.toLowerCase().includes(q));
+  return list;
+}
 function render(list){
-let html='';
-list.forEach(p=>{
-html+=`<div class="card"><img src="${p.img}"><div class="info"><span class="badge">-30% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price}</span><span class="old">Rs ${p.old}</span></div><div style="color:#f59e0b">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`;
-});
-document.getElementById('products').innerHTML=html;
+  if(list.length==0){ document.getElementById('products').innerHTML='<div class="empty">😔 Koi product nahi mila<br><small>Doosra naam try karo</small></div>'; return; }
+  let html='';
+  list.forEach(p=>{
+    let off=Math.round((1-p.price/p.old)*100);
+    html+=`<div class="card"><img src="${p.img}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400'"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`;
+  });
+  document.getElementById('products').innerHTML=html;
 }
 render(products);
 function filterCat(c,btn){
-document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active')); 
-if(btn && btn.classList) btn.classList.add('active');
-if(c=='all') render(products); else render(products.filter(p=>p.cat==c));
+  currentCat=c;
+  document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  if(btn){
+    if(btn.classList) btn.classList.add('active');
+    if(btn.closest && btn.closest('.cat')){ /* cat button */ }
+  }
+  // highlight matching cat button
+  let catBtns=document.querySelectorAll('#catBar button');
+  catBtns.forEach(b=>{ if((c=='all' && b.textContent.includes('All')) || b.getAttribute('onclick')?.includes("'"+c+"'")) b.classList.add('active'); });
+  render(getFiltered());
+  let el=document.getElementById('products');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
 }
-function searchProduct(){
-let q=document.getElementById('searchInput').value.toLowerCase();
-render(products.filter(p=>p.name.toLowerCase().includes(q)));
+function searchProduct(){ render(getFiltered()); }
+function showToast(msg){
+  let t=document.getElementById('toast'); t.innerText=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),1800);
 }
 function addToCart(id){
-let p=products.find(x=>x.id==id); cart.push(p); updateCart(); alert(p.name+' Added To Cart!');
+  let p=products.find(x=>x.id==id);
+  let found=cart.find(x=>x.id==id);
+  if(found) found.qty++;
+  else cart.push({...p,qty:1});
+  updateCart(); showToast(p.name+' Added ✅');
+}
+function changeQty(id,delta){
+  let it=cart.find(x=>x.id==id); if(!it) return;
+  it.qty+=delta; if(it.qty<=0) cart=cart.filter(x=>x.id!=id);
+  updateCart();
 }
 function updateCart(){
-document.getElementById('cartCount').innerText=cart.length;
-let total=cart.reduce((s,p)=>s+p.price,0);
-document.getElementById('cartTotal').innerText=total;
-if(cart.length==0) document.getElementById('cartItems').innerHTML='<p>Cart is empty</p>';
-else{
-let h=''; cart.forEach((p,i)=>{ h+=`<div class="cart-item"><img src="${p.img}"><div><b>${p.name}</b><br>Rs ${p.price}<br><button onclick="removeItem(${i})" style="color:red;border:none;background:none">Remove</button></div></div>`});
-document.getElementById('cartItems').innerHTML=h;
+  let count=cart.reduce((s,p)=>s+p.qty,0);
+  document.getElementById('cartCount').innerText=count;
+  let total=cart.reduce((s,p)=>s+p.price*p.qty,0);
+  document.getElementById('cartTotal').innerText=total.toLocaleString();
+  let del = total==0?0 : (total>=5000?0:250);
+  document.getElementById('delCharge').innerText = del==0? (total==0?'Rs 0':'FREE ✅') : 'Rs '+del;
+  document.getElementById('grandTotal').innerText=(total+del).toLocaleString();
+  document.getElementById('freeMsg').innerText = total>0 && total<5000 ? `Rs ${(5000-total).toLocaleString()} aur add karo, Delivery FREE ho jayegi! 🎉` : (total>=5000?'🎉 Aapki Delivery FREE hai!':'');
+  if(cart.length==0) document.getElementById('cartItems').innerHTML='<p style="text-align:center;color:#999;padding:20px">Cart is empty<br>🛒 Koi product add karo</p>';
+  else{
+    let h=''; cart.forEach(p=>{ h+=`<div class="cart-item"><img src="${p.img}"><div style="flex:1"><b>${p.name}</b><br><span style="font-size:13px;color:#888">${p.desc}</span><br>Rs ${p.price.toLocaleString()} x ${p.qty} = <b>Rs ${(p.price*p.qty).toLocaleString()}</b><br><div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button class="qty-btn" onclick="changeQty(${p.id},-1)">-</button><b>${p.qty}</b><button class="qty-btn" onclick="changeQty(${p.id},1)">+</button><button onclick="changeQty(${p.id},-${p.qty})" style="color:red;border:none;background:none;margin-left:6px;cursor:pointer">Remove</button></div></div></div>`});
+    document.getElementById('cartItems').innerHTML=h;
+  }
 }
-}
-function removeItem(i){ cart.splice(i,1); updateCart(); }
 function openCart(){ document.getElementById('cartBox').classList.add('open'); }
 function closeCart(){ document.getElementById('cartBox').classList.remove('open'); }
 function checkout(){
-let name=document.getElementById('cname').value;
-let phone=document.getElementById('cphone').value;
-let addr=document.getElementById('caddress').value;
-let pay=document.getElementById('cpayment').value;
-if(!name||!phone||!addr){ alert('Please apna Name, Phone aur Address likhein'); return; }
-if(cart.length==0){ alert('Cart khali hai!'); return; }
-let total=document.getElementById('cartTotal').innerText;
-let items=cart.map(p=>p.name+' - Rs '+p.price).join('%0A');
-let msg=`NEW ORDER - ZAR JEWELLERS VEHARI%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0APayment: ${pay}%0A%0AItems:%0A${items}%0A%0ATotal: Rs ${total}`;
-window.open(`https://wa.me/923341765911?text=${msg}`,'_blank');
+  let name=document.getElementById('cname').value.trim();
+  let phone=document.getElementById('cphone').value.trim();
+  let addr=document.getElementById('caddress').value.trim();
+  let pay=document.getElementById('cpayment').value;
+  if(!name||!phone||!addr){ showToast('⚠️ Name, Phone aur Address likhein'); return; }
+  if(cart.length==0){ showToast('Cart khali hai!'); return; }
+  let total=document.getElementById('cartTotal').innerText;
+  let grand=document.getElementById('grandTotal').innerText;
+  let del=document.getElementById('delCharge').innerText;
+  let items=cart.map(p=>`• ${p.name} x ${p.qty} - Rs ${(p.price*p.qty).toLocaleString()}`).join('%0A');
+  let msg=`NEW ORDER - ZAR JEWELLERS VEHARI%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0APayment: ${pay}%0A%0AItems:%0A${items}%0A%0ASubtotal: Rs ${total}%0ADelivery: ${del}%0AGrand Total: Rs ${grand}`;
+  window.open(`https://wa.me/923341765911?text=${msg}`,'_blank');
 }
 </script>
 </body>
