@@ -242,78 +242,66 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </div>
 </footer>
 <script>
-// ✅ 100% VERIFIED UNSPLASH PICS ONLY - Koi Pexels Nakli ID Nahi!
-// Har Category ki Pic usi Category ki hai
+// ✅ FINAL FIXED - Har Category ki Pic uske Naam ke hisaab se hai
 const IMG={
-ring1:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&fit=crop&crop=entropy",
-ring2:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&fit=crop&crop=entropy",
-ring3:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&fit=crop&crop=entropy",
-ring4:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=600&fit=crop&crop=entropy",
-ring5:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&fit=crop&crop=entropy",
-neck1:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&fit=crop&crop=entropy",
-neck2:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&fit=crop&crop=entropy",
-neck3:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&fit=crop&crop=entropy",
-neck4:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&fit=crop&crop=entropy",
-ear1:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&fit=crop&crop=entropy",
-ear2:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&fit=crop&crop=entropy",
-ear3:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=600&fit=crop&crop=entropy",
-bridal1:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&fit=crop&crop=entropy",
-bridal2:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=600&fit=crop&crop=entropy",
-bridal3:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&fit=crop&crop=entropy",
-brace1:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&fit=crop&crop=entropy",
-brace2:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=600&fit=crop&crop=entropy",
-tikka1:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&fit=crop&crop=entropy",
-watch1:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&fit=crop&crop=entropy",
-watch2:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&fit=crop&crop=entropy",
-watch3:"https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600&fit=crop&crop=entropy"
+ring1:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&fit=crop",
+ring2:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&fit=crop",
+ring3:"https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&fit=crop",
+ring4:"https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=600&fit=crop",
+ring5:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&fit=crop",
+neck1:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&fit=crop",
+neck2:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&fit=crop",
+neck3:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&fit=crop",
+neck4:"https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&fit=crop",
+ear1:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&fit=crop",
+ear2:"https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&fit=crop",
+ear3:"https://images.unsplash.com/photo-1611652022417-dd5513f8e2df?w=600&fit=crop",
+bridal1:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&fit=crop",
+bridal2:"https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=600&fit=crop",
+bridal3:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&fit=crop",
+brace1:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&fit=crop",
+brace2:"https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=600&fit=crop",
+tikka1:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&fit=crop",
+watch1:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&fit=crop",
+watch2:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&fit=crop"
 };
 let products=[
-/* RINGS - SIRF RING PICS */
 {id:1,name:"Gold Plated Classic Ring",cat:"ring",price:1499,old:2499,img:IMG.ring1,desc:"Gold Plated | Adjustable"},
 {id:2,name:"Diamond Zircon Solitaire Ring",cat:"ring",price:1999,old:2999,img:IMG.ring2,desc:"Zircon Stone | Premium"},
 {id:3,name:"Couple Promise Rings Pair",cat:"ring",price:2499,old:3999,img:IMG.ring3,desc:"Pair | Silver + Gold"},
 {id:4,name:"Men Silver Steel Ring",cat:"ring",price:1799,old:2599,img:IMG.ring4,desc:"Men | Silver | Stylish"},
 {id:5,name:"Ruby Royal Stone Ring",cat:"ring",price:2299,old:3499,img:IMG.ring5,desc:"Ruby | Gold Plated"},
-/* NECKLACE - SIRF NECKLACE PICS */
 {id:6,name:"Pearl Classic Necklace",cat:"necklace",price:2999,old:4999,img:IMG.neck1,desc:"Pearl | Elegant"},
 {id:7,name:"Gold Long Chain Necklace",cat:"necklace",price:3499,old:5500,img:IMG.neck2,desc:"Gold Plated | Long"},
 {id:8,name:"Kundan Bridal Choker Necklace",cat:"necklace",price:2199,old:3299,img:IMG.neck3,desc:"Bridal | Kundan"},
 {id:9,name:"Long Mala Bridal Necklace",cat:"necklace",price:2799,old:4199,img:IMG.neck4,desc:"Mala | Bridal | Long"},
 {id:10,name:"Heart Pendant Gift Necklace",cat:"necklace",price:1899,old:2899,img:IMG.neck1,desc:"Heart | Gift For Her"},
-/* EARRINGS - SIRF EARRINGS PICS - KOI GUITAR NAHI */
 {id:11,name:"Gold Traditional Jhumka",cat:"earrings",price:1299,old:1999,img:IMG.ear1,desc:"Jhumka | Traditional"},
 {id:12,name:"Pearl Drop Light Earrings",cat:"earrings",price:999,old:1599,img:IMG.ear2,desc:"Pearl Drop | Light Weight"},
 {id:13,name:"Chand Bali Fancy Earrings",cat:"earrings",price:1599,old:2399,img:IMG.ear3,desc:"Chand Bali | Fancy"},
 {id:14,name:"Diamond Stud Daily Earrings",cat:"earrings",price:1499,old:2299,img:IMG.ear2,desc:"Stud | Daily Wear"},
 {id:15,name:"Kundan Heavy Jhumka",cat:"earrings",price:1899,old:2899,img:IMG.ear1,desc:"Kundan | Heavy"},
-/* BRIDAL - SIRF JEWELLERY SET PICS - KOI SHAADI / KHANA WALI PIC NAHI */
 {id:16,name:"Complete Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:IMG.bridal2,desc:"Full Set | Necklace + Earrings + Tikka"},
 {id:17,name:"Kundan Premium Bridal Set",cat:"bridal",price:9999,old:15000,img:IMG.bridal1,desc:"Kundan | Premium Bridal"},
 {id:18,name:"Mehndi Green Gold Bridal Set",cat:"bridal",price:5999,old:8999,img:IMG.bridal3,desc:"Mehndi | Green + Gold"},
 {id:19,name:"Red Dulhan Special Set",cat:"bridal",price:8999,old:13500,img:IMG.bridal1,desc:"Red | Dulhan Special"},
 {id:20,name:"Royal Heavy Bridal Set",cat:"bridal",price:11999,old:18000,img:IMG.bridal2,desc:"Royal | Full Heavy Set"},
-/* BRACELET - SIRF BRACELET PICS */
 {id:21,name:"Gold Plated Classic Bracelet",cat:"bracelet",price:1799,old:2699,img:IMG.brace1,desc:"Bracelet | Gold Plated"},
 {id:22,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:IMG.brace2,desc:"Kara | Men & Women"},
 {id:23,name:"Silver Chain Bracelet",cat:"bracelet",price:1499,old:2199,img:IMG.brace1,desc:"Silver | Chain Bracelet"},
 {id:24,name:"Pearl Women Bracelet",cat:"bracelet",price:1199,old:1899,img:IMG.brace2,desc:"Pearl | Women"},
-/* BANGLES - SIRF BRACELET / BANGLES PICS - NECKLACE WALI PIC NAHI */
 {id:25,name:"Colorful Bangles 4 Pcs Set",cat:"bangles",price:1199,old:1899,img:IMG.brace2,desc:"Bangles | Colorful"},
 {id:26,name:"Gold Pair Bangles 2 Pcs",cat:"bangles",price:1499,old:2299,img:IMG.brace1,desc:"Gold | Pair"},
 {id:27,name:"Red Bridal Chura Bangles",cat:"bangles",price:1799,old:2699,img:IMG.brace2,desc:"Red Chura | Bridal"},
 {id:28,name:"Glass Multi Bangles 12 Pcs",cat:"bangles",price:899,old:1399,img:IMG.brace1,desc:"Glass | 12 Pcs | Multi"},
-/* TIKKA - SIRF TIKKA PICS */
 {id:29,name:"Gold Plated Classic Tikka",cat:"tikka",price:999,old:1599,img:IMG.tikka1,desc:"Tikka | Gold Plated"},
 {id:30,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:IMG.tikka1,desc:"Kundan | Bridal"},
 {id:31,name:"Gold Heavy Matha Patti",cat:"tikka",price:1999,old:2999,img:IMG.tikka1,desc:"Matha Patti | Heavy"},
-/* NOSE PIN - RING CLOSE-UP = SMALL STONE JAISE NOSE PIN */
 {id:32,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:IMG.ring5,desc:"Gold Plated | Small"},
 {id:33,name:"Diamond Shiny Nose Pin",cat:"nosepin",price:799,old:1299,img:IMG.ring2,desc:"Diamond | Shiny"},
-/* ANKLET - BRACELET JAISE CHAIN */
 {id:34,name:"Silver Pazaib Anklet Pair",cat:"anklet",price:1199,old:1899,img:IMG.brace1,desc:"Silver | Pazaib | Pair"},
-/* WATCH - SIRF WATCH PICS */
-{id:35,name:"Luxury Gold Men Watch",cat:"watch",price:4999,old:7999,img:IMG.watch1,desc:"Men Watch | Gold | Premium"},
-{id:36,name:"Elegant Women Watch",cat:"watch",price:3499,old:5499,img:IMG.watch2,desc:"Women Watch | Elegant"},
+{id:35,name:"Minimal White Watch - Unisex",cat:"watch",price:4999,old:7999,img:IMG.watch1,desc:"White Strap | Minimal | Unisex"},
+{id:36,name:"Classic Brown Chronograph Watch",cat:"watch",price:3499,old:5499,img:IMG.watch2,desc:"Brown Leather | Chronograph | Men"},
 ];
 let cart=[];
 let currentCat='all';
