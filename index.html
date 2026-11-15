@@ -81,7 +81,7 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </style>
 </head>
 <body>
-<div class="top">✨ ZAR JEWELLERS - VEHARI | 36 EXCLUSIVE DESIGNS | FREE DELIVERY ABOVE RS 5000 ✨</div>
+<div class="top">✨ ZAR JEWELLERS - VEHARI | 54 EXCLUSIVE DESIGNS | FREE DELIVERY ABOVE RS 5000 ✨</div>
 <nav class="navbar">
 <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">ZAR <span>JEWELLERS ✨</span></div>
 <div class="nav-links">
@@ -109,12 +109,12 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </nav>
 <div class="hero">
 <h1>Zar Jewellers ✨ - Vehari</h1>
-<p>Gold Plated | Artificial Jewelry | Bridal Set | 36 Exclusive Designs - All Pakistan Delivery</p>
-<a href="#products">Shop 36 Designs →</a>
+<p>Gold Plated | Artificial Jewelry | Bridal Set | 54 Exclusive Designs - All Pakistan Delivery</p>
+<a href="#products">Shop 54 Designs →</a>
 <small>⭐ 4.9 Rating • 500+ Happy Customers • Cash On Delivery Available</small>
 </div>
 <div class="cat" id="catBar">
-<button class="active" onclick="filterCat('all',this)">All (36)</button>
+<button class="active" onclick="filterCat('all',this)">All (54)</button>
 <button onclick="filterCat('ring',this)">💍 Rings</button>
 <button onclick="filterCat('necklace',this)">📿 Necklace</button>
 <button onclick="filterCat('earrings',this)">✨ Earrings</button>
@@ -129,7 +129,7 @@ footer a{display:block} footer a:hover{color:#d4af37}
 <div class="features">
 <div>✅<br>Cash On Delivery</div><div>🚚<br>Vehari Delivery</div><div>↩️<br>7 Days Return</div><div>💯<br>Premium Quality</div>
 </div>
-<div class="count-bar" id="countBar">Showing 36 Products</div>
+<div class="count-bar" id="countBar">Showing 54 Products</div>
 <div class="grid" id="products"></div>
 <div id="cartBox">
 <button class="close" onclick="closeCart()">X</button>
@@ -242,55 +242,73 @@ footer a{display:block} footer a:hover{color:#d4af37}
 </div>
 </footer>
 <script>
-// ✅ COMPLETE CODE - SIRF UNSPLASH - RING SECTION FIXED
 const U="https://images.unsplash.com/photo-";
 function img(id,crop){ return U+id+"?w=600&auto=format&fit=crop&crop="+crop+"&q=80"; }
 let products=[
-// RINGS - 5 alag Ring pics - Haar / Chain wali pics hata di
+// RINGS - 7 Rings - Sab ki pic sirf Ring
 {id:1,name:"Gold Plated Classic Ring",cat:"ring",price:1499,old:2499,img:img("1515562141207-7a88fb7ce338","entropy"),desc:"Gold Plated | Adjustable"},
 {id:2,name:"Diamond Zircon Solitaire Ring",cat:"ring",price:1999,old:2999,img:img("1605100804763-247f67b3557e","entropy"),desc:"Zircon Stone | Premium"},
 {id:3,name:"Couple Promise Rings Pair",cat:"ring",price:2499,old:3999,img:img("1603561591411-07134e71a2a9","top"),desc:"Pair | Silver + Gold"},
 {id:4,name:"Men Silver Steel Ring",cat:"ring",price:1799,old:2599,img:img("1608042314453-ae338d80c427","bottom"),desc:"Men | Silver | Stylish"},
 {id:5,name:"Ruby Royal Stone Ring",cat:"ring",price:2299,old:3499,img:img("1611591437281-460bfbe1220a","entropy"),desc:"Ruby | Gold Plated"},
-// NECKLACE
+{id:37,name:"Gold Diamond Ring Women",cat:"ring",price:2599,old:3999,img:"https://cdn.caratlane.com/media/catalog/product/J/R/JR03799-YGS300_10_lar.jpg",desc:"Gold | Diamond | Women"},
+{id:49,name:"Mens Gold Signet Ring",cat:"ring",price:2199,old:3299,img:"https://bafleh.com/wp-content/uploads/2026/07/B26MR6-2-1-1500x1500.jpg",desc:"Men | Gold | Signet"},
+// NECKLACE - 9 Necklace - Sab ki pic sirf Necklace
 {id:6,name:"Pearl Classic Necklace",cat:"necklace",price:2999,old:4999,img:img("1599643478518-a784e5dc4c8f","entropy"),desc:"Pearl | Elegant"},
 {id:7,name:"Gold Long Chain Necklace",cat:"necklace",price:3499,old:5500,img:img("1601121141461-9d6647bca1ed","top"),desc:"Gold Plated | Long"},
 {id:8,name:"Kundan Bridal Choker Necklace",cat:"necklace",price:2199,old:3299,img:img("1611085583191-a3b181a88401","entropy"),desc:"Bridal | Kundan"},
 {id:9,name:"Long Mala Bridal Necklace",cat:"necklace",price:2799,old:4199,img:img("1602751584552-8ba73aad10e1","bottom"),desc:"Mala | Bridal | Long"},
 {id:10,name:"Heart Pendant Gift Necklace",cat:"necklace",price:1899,old:2899,img:img("1601821765780-754fa98637c1","top"),desc:"Heart | Gift For Her"},
-// EARRINGS
+{id:38,name:"Gold Pendant Necklace Women",cat:"necklace",price:2399,old:3599,img:"https://prao.com/cdn/shop/files/image-7_816c0bcf-2b8c-4b05-b848-dfe8eb9f31e5.jpg?v=1779279184&width=1100",desc:"Gold | Pendant | Women"},
+{id:44,name:"Pearl Elegant Necklace",cat:"necklace",price:3199,old:4799,img:"https://cdn2.jomashop.com/media/catalog/product/cache/0ee3019724ce73007b606b54ba535a23/b/e/belacqua-round-white-south-sea-pearl-graduated-strand-necklace-in-14k-white-gold105130mm-pearls-18-inches-diamond-ball-clasp-nsv_3.jpg?width=546&height=546",desc:"Pearl | Elegant | Single Strand"},
+{id:46,name:"Kundan Choker Necklace Red Green",cat:"necklace",price:2899,old:4299,img:"https://indoraaga.com/cdn/shop/files/NW-22-KUN-GP-NS-0223-0575-2.jpg?v=1697120960&width=713",desc:"Kundan | Choker | Red Green"},
+{id:50,name:"Women Gold Thin Chain Necklace",cat:"necklace",price:1999,old:2999,img:"https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/0hUAAOSwW-BlTetQ/$_57.JPG?set_id=8800005007",desc:"Gold | Thin Chain | Women"},
+// EARRINGS - 8 Earrings - Sab ki pic sirf Earrings
 {id:11,name:"Gold Traditional Jhumka",cat:"earrings",price:1299,old:1999,img:img("1573408301185-9146fe634ad0","entropy"),desc:"Jhumka | Traditional"},
 {id:12,name:"Pearl Drop Light Earrings",cat:"earrings",price:999,old:1599,img:img("1630019852942-f89202989a59","top"),desc:"Pearl Drop | Light Weight"},
 {id:13,name:"Chand Bali Fancy Earrings",cat:"earrings",price:1599,old:2399,img:img("1611652022417-dd5513f8e2df","entropy"),desc:"Chand Bali | Fancy"},
 {id:14,name:"Diamond Stud Daily Earrings",cat:"earrings",price:1499,old:2299,img:img("1611652022419-a9419f74343d","bottom"),desc:"Stud | Daily Wear"},
 {id:15,name:"Kundan Heavy Jhumka",cat:"earrings",price:1899,old:2899,img:img("1610694955371-d4a3e0ce4b52","entropy"),desc:"Kundan | Heavy"},
-// BRIDAL
+{id:39,name:"Gold Jhumka Pair",cat:"earrings",price:1399,old:2099,img:"https://i.pinimg.com/originals/d0/fc/46/d0fc468e3e3afa8561f24a8322d822ea.jpg",desc:"Gold | Jhumka Pair"},
+{id:45,name:"Diamond Stud Earrings Pair",cat:"earrings",price:2199,old:3299,img:"https://media.rainpos.com/13635/shopify/estate-14k-w-gold-020ctw-gsi2-i1-diamond-stud-earrings-719403.jpg",desc:"Diamond | Stud Pair"},
+{id:51,name:"Gold Chandbali Earrings",cat:"earrings",price:1799,old:2699,img:"https://shop.swarna.com/wp-content/uploads/2023/04/OQ3843_4.jpg",desc:"Gold | Chandbali"},
+// BRIDAL - 7 Bridal - Sab ki pic sirf Bridal Set
 {id:16,name:"Complete Bridal Jewelry Set",cat:"bridal",price:7999,old:12000,img:img("1583939003579-730e3918a45a","entropy"),desc:"Full Set | Necklace + Earrings + Tikka"},
 {id:17,name:"Kundan Premium Bridal Set",cat:"bridal",price:9999,old:15000,img:img("1610030469983-98e550d6193c","top"),desc:"Kundan | Premium Bridal"},
 {id:18,name:"Mehndi Green Gold Bridal Set",cat:"bridal",price:5999,old:8999,img:img("1611591437281-460bfbe1220a","entropy"),desc:"Mehndi | Green + Gold"},
 {id:19,name:"Red Dulhan Special Set",cat:"bridal",price:8999,old:13500,img:img("1599459183200-59c7687a0275","bottom"),desc:"Red | Dulhan Special"},
 {id:20,name:"Royal Heavy Bridal Set",cat:"bridal",price:11999,old:18000,img:img("1535632066927-ab7c9ab60908","entropy"),desc:"Royal | Full Heavy Set"},
-// BRACELET
+{id:40,name:"Bridal Gold Necklace Set",cat:"bridal",price:8999,old:13999,img:"https://i.etsystatic.com/66074302/r/il/7708ad/8185580895/il_600x600.8185580895_l106.jpg",desc:"Gold | Bridal Set | Choker + Mala"},
+{id:52,name:"Red Bridal Full Set",cat:"bridal",price:10999,old:16500,img:"https://www.nayabjewellery.com/cdn/shop/files/WhatsAppImage2025-10-06at7.57.05PM_1.jpg?v=1759766099&width=1445",desc:"Red | Full Bridal Set | Tikka + Earrings"},
+// BRACELET - 5 Bracelet - Sab ki pic sirf Bracelet
 {id:21,name:"Gold Plated Classic Bracelet",cat:"bracelet",price:1799,old:2699,img:img("1602173574767-37ac01994b2a","top"),desc:"Bracelet | Gold Plated"},
 {id:22,name:"Gold Kara Unisex Bracelet",cat:"bracelet",price:1299,old:1999,img:img("1601121141461-9d6647bca1ed","bottom"),desc:"Kara | Men & Women"},
 {id:23,name:"Silver Chain Bracelet",cat:"bracelet",price:1499,old:2199,img:img("1611085583191-a3b181a88401","top"),desc:"Silver | Chain Bracelet"},
 {id:24,name:"Pearl Women Bracelet",cat:"bracelet",price:1199,old:1899,img:img("1599643478518-a784e5dc4c8f","top"),desc:"Pearl | Women"},
-// BANGLES
+{id:43,name:"Silver Chain Bracelet Men",cat:"bracelet",price:1699,old:2499,img:"https://www.alfredco.com/wp-content/uploads/2025/11/Mens-Silver-Bracelets.jpeg",desc:"Silver | Chain | Men"},
+// BANGLES - 6 Bangles - Sab ki pic sirf Bangles
 {id:25,name:"Colorful Bangles 4 Pcs Set",cat:"bangles",price:1199,old:1899,img:img("1602751584552-8ba73aad10e1","top"),desc:"Bangles | Colorful"},
 {id:26,name:"Gold Pair Bangles 2 Pcs",cat:"bangles",price:1499,old:2299,img:img("1601821765780-754fa98637c1","bottom"),desc:"Gold | Pair"},
 {id:27,name:"Red Bridal Chura Bangles",cat:"bangles",price:1799,old:2699,img:img("1610694955371-d4a3e0ce4b52","top"),desc:"Red Chura | Bridal"},
 {id:28,name:"Glass Multi Bangles 12 Pcs",cat:"bangles",price:899,old:1399,img:img("1611652022417-dd5513f8e2df","bottom"),desc:"Glass | 12 Pcs | Multi"},
-// TIKKA
+{id:41,name:"Gold Bangles Set Women",cat:"bangles",price:1999,old:2999,img:"https://andaazjewels.com/cdn/shop/products/IMG_8424_85f0de0e-8c29-4f09-a8a2-df6c16466b73_1800x.jpg",desc:"Gold | Bangles Set | Women"},
+{id:53,name:"Multi Color Glass Bangles 24 Pcs",cat:"bangles",price:1299,old:1999,img:"https://rukminim3.flixcart.com/image/1114/972/xif0q/bangle-bracelet-armlet/x/e/9/2-2-0-2-na-24-ramaa-raindropbangle-pack-of-24-bangle-darkmulti-2-original-imahnx7czt3hhrbg.jpeg?q=60&crop=false",desc:"Glass | Multi Color | 24 Pcs"},
+// TIKKA - 4 Tikka - Sab ki pic sirf Tikka
 {id:29,name:"Gold Plated Classic Tikka",cat:"tikka",price:999,old:1599,img:img("1573408301185-9146fe634ad0","top"),desc:"Tikka | Gold Plated"},
 {id:30,name:"Kundan Bridal Tikka",cat:"tikka",price:1299,old:1999,img:img("1630019852942-f89202989a59","bottom"),desc:"Kundan | Bridal"},
 {id:31,name:"Gold Heavy Matha Patti",cat:"tikka",price:1999,old:2999,img:img("1611652022419-a9419f74343d","top"),desc:"Matha Patti | Heavy"},
-// NOSE PIN
+{id:42,name:"Gold Maang Tikka",cat:"tikka",price:1499,old:2299,img:"https://pub-d3a58fb30430417fbf76ea0914807be1.r2.dev/prompts/jewelry-photoshoot/maang-tikka/original/1029opulent-wedding-jewelry-focus.jpg",desc:"Gold | Maang Tikka"},
+// NOSE PIN - 3 Nose Pin - Sab ki pic sirf Nose Pin
 {id:32,name:"Gold Small Nose Pin",cat:"nosepin",price:499,old:899,img:img("1515562141207-7a88fb7ce338","top"),desc:"Gold Plated | Small Diamond"},
 {id:33,name:"Diamond Shiny Nose Pin",cat:"nosepin",price:799,old:1299,img:img("1605100804763-247f67b3557e","bottom"),desc:"Diamond | Shiny"},
+{id:47,name:"Diamond Nose Pin Small",cat:"nosepin",price:899,old:1399,img:"https://yuvorajewels.com/cdn/shop/files/DIANP1047-14YG-IS.webp?v=1766224116&width=1500",desc:"Diamond | Small Nose Pin"},
+// ANKLET - 2 Anklet - Sab ki pic sirf Anklet / Payal
 {id:34,name:"Silver Pazaib Anklet Pair",cat:"anklet",price:1199,old:1899,img:img("1603561591411-07134e71a2a9","bottom"),desc:"Silver | Pazaib | Pair"},
-// WATCH
+{id:48,name:"Gold Payal Anklet Pair",cat:"anklet",price:1899,old:2899,img:"https://assets.myntassets.com/h_560,q_90,w_420/v1/assets/images/2026/AUGUST/31/844910f3d8f747dcb010556c2bedec34.jpg",desc:"Gold | Payal | Anklet Pair"},
+// WATCH - 3 Watch - Sab ki pic sirf Watch
 {id:35,name:"Minimal White Watch - Unisex",cat:"watch",price:4999,old:7999,img:img("1523275335684-37898b6baf30","entropy"),desc:"White Strap | Minimal | Unisex"},
 {id:36,name:"Classic Brown Chronograph Watch",cat:"watch",price:3499,old:5499,img:img("1524805444758-089113d48a6d","entropy"),desc:"Brown Leather | Chronograph | Men"},
+{id:54,name:"Luxury Gold Watch Men",cat:"watch",price:5999,old:8999,img:"https://m.media-amazon.com/images/I/81GMWja9ZaL._AC_UY900_.jpg",desc:"Gold | Luxury | Men"},
 ];
 let cart=[];
 let currentCat='all';
@@ -304,7 +322,7 @@ function getFiltered(){ let q=document.getElementById('searchInput').value.toLow
 function render(list){
   document.getElementById('countBar').innerText=`Showing ${list.length} Products ${currentCat!='all'?' - '+currentCat.toUpperCase():''}`;
   if(list.length==0){ document.getElementById('products').innerHTML='<div class="empty">😔 Koi product nahi mila<br><small>Doosra naam try karo</small></div>'; return; }
-  let html=''; list.forEach(p=>{ let off=Math.round((1-p.price/p.old)*100); html+=`<div class="card"><img src="${p.img}" loading="lazy"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`; }); document.getElementById('products').innerHTML=html;
+  let html=''; list.forEach(p=>{ let off=Math.round((1-p.price/p.old)*100); html+=`<div class="card"><img src="${p.img}" loading="lazy" referrerpolicy="no-referrer"><div class="info"><span class="badge">-${off}% OFF</span><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price">Rs ${p.price.toLocaleString()}</span><span class="old">Rs ${p.old.toLocaleString()}</span></div><div class="stars">⭐⭐⭐⭐⭐ (150)</div><button class="add" onclick="addToCart(${p.id})">Add To Cart 🛒</button></div></div>`; }); document.getElementById('products').innerHTML=html;
 }
 render(products);
 function filterCat(c,btn){ currentCat=c; document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active')); document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active')); if(btn && btn.classList) btn.classList.add('active'); render(getFiltered()); document.getElementById('products').scrollIntoView({behavior:'smooth',block:'start'}); }
